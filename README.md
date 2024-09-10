@@ -12,6 +12,7 @@ The goal of this project is to develop an AI-driven chatbot that provides real-t
 
 ### Project Structure
 
+```
 ├── LICENSE
 ├── README.md          <- The top-level README for developers/collaborators using this project.
 │
@@ -28,7 +29,7 @@ The goal of this project is to develop an AI-driven chatbot that provides real-t
     │
     ├── visualizations <- Code and Visualization dashboards generated for the project
     └── results        <- Folder to store Final analysis and modelling results and code.
-
+```
 
 ## Project Setup
 
