@@ -1,3 +1,8 @@
 .venv/
 .env
 *__test__*
+
+env/
+__pycache__/
+
+*.html
