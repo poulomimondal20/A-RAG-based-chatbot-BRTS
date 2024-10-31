@@ -56,9 +56,9 @@ def main(map):
             if locate_me:
                 loc = get_geolocation()
                 if loc is not None:
-                    st.toast("📍 Locating you...")
+                    st.write("📍 Locating you...")
                     user_lat, user_long = loc['coords']['latitude'], loc['coords']['longitude']
-                    st.toast("📍 Location found! {} {}".format(user_lat, user_long))
+                    st.success("📍 Location found! {} {}".format(user_lat, user_long))
                     
                   
                     user_location_df = pd.DataFrame({
