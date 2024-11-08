@@ -1,4 +1,4 @@
-# Task 2: Data Collection for AI Chatbot - BRTS Navigation in Bhopal
+# Task 2: Report
 
 ## Overview
 Task 2 of our project focused on gathering and structuring critical data regarding bus stations, routes, and geographical coordinates (latitude and longitude). This data served as the foundation for the AI chatbot, enabling it to assist users in navigating the Bhopal BRTS system efficiently.
