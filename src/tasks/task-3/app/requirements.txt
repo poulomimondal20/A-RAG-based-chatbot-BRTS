@@ -1,8 +1,0 @@
-pillow
-pandas
-humanize
-matplotlib
-streamlit
-plotly==5.22.0
-streamlit-lottie
-streamlit-js-eval
