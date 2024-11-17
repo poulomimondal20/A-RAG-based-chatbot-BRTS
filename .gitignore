@@ -5,6 +5,6 @@
 env/
 __pycache__/
 
-*.html
-
 misc/
+
+*.bin

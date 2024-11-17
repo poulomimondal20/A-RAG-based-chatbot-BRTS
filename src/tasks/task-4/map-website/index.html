@@ -1,0 +1,4361 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Bhopal BRTS Routes</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~9.0.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "latitude": 23.238252493850467,
+    "longitude": 77.42409717884112,
+    "pitch": 50,
+    "zoom": 11
+  },
+  "layers": [
+    {
+      "@@type": "ScatterplotLayer",
+      "data": [
+        {
+          "id": "SR1-1",
+          "latitude": 23.27326584,
+          "link": "https://www.google.com/maps/place/23.27326584,77.36399078",
+          "longitude": 77.36399078,
+          "route": "SR1",
+          "station": "Halalpur Bus Stand"
+        },
+        {
+          "id": "SR1-2",
+          "latitude": 23.27306938,
+          "link": "https://www.google.com/maps/place/23.27306938,77.36846924",
+          "longitude": 77.36846924,
+          "route": "SR1",
+          "station": "Lalghati"
+        },
+        {
+          "id": "SR1-3",
+          "latitude": 23.27131844,
+          "link": "https://www.google.com/maps/place/23.27131844,77.37574005",
+          "longitude": 77.37574005,
+          "route": "SR1",
+          "station": "Vip Guest"
+        },
+        {
+          "id": "SR1-4",
+          "latitude": 23.26911736,
+          "link": "https://www.google.com/maps/place/23.26911736,77.37727356",
+          "longitude": 77.37727356,
+          "route": "SR1",
+          "station": "Koh-E-Fiza"
+        },
+        {
+          "id": "SR1-5",
+          "latitude": 23.26358795,
+          "link": "https://www.google.com/maps/place/23.26358795,77.38312531",
+          "longitude": 77.38312531,
+          "route": "SR1",
+          "station": "Collectorate"
+        },
+        {
+          "id": "SR1-6",
+          "latitude": 23.26187897,
+          "link": "https://www.google.com/maps/place/23.26187897,77.38874054",
+          "longitude": 77.38874054,
+          "route": "SR1",
+          "station": "Sbi Chouraha"
+        },
+        {
+          "id": "SR1-7",
+          "latitude": 23.26150322,
+          "link": "https://www.google.com/maps/place/23.26150322,77.39205933",
+          "longitude": 77.39205933,
+          "route": "SR1",
+          "station": "Royal Market"
+        },
+        {
+          "id": "SR1-8",
+          "latitude": 23.2591362,
+          "link": "https://www.google.com/maps/place/23.2591362,77.39845276",
+          "longitude": 77.39845276,
+          "route": "SR1",
+          "station": "Peergate"
+        },
+        {
+          "id": "SR1-9",
+          "latitude": 23.25592232,
+          "link": "https://www.google.com/maps/place/23.25592232,77.39857483",
+          "longitude": 77.39857483,
+          "route": "SR1",
+          "station": "Moti Masjid"
+        },
+        {
+          "id": "SR1-10",
+          "latitude": 23.25196648,
+          "link": "https://www.google.com/maps/place/23.25196648,77.39789581",
+          "longitude": 77.39789581,
+          "route": "SR1",
+          "station": "Kamla Park"
+        },
+        {
+          "id": "SR1-11",
+          "latitude": 23.24457741,
+          "link": "https://www.google.com/maps/place/23.24457741,77.39684296",
+          "longitude": 77.39684296,
+          "route": "SR1",
+          "station": "Polytechnic"
+        },
+        {
+          "id": "SR1-12",
+          "latitude": 23.24265099,
+          "link": "https://www.google.com/maps/place/23.24265099,77.39748383",
+          "longitude": 77.39748383,
+          "route": "SR1",
+          "station": "Rang Mahal"
+        },
+        {
+          "id": "SR1-13",
+          "latitude": 23.23756409,
+          "link": "https://www.google.com/maps/place/23.23756409,77.40115356",
+          "longitude": 77.40115356,
+          "route": "SR1",
+          "station": "Roshanpura"
+        },
+        {
+          "id": "SR1-14",
+          "latitude": 23.2351284,
+          "link": "https://www.google.com/maps/place/23.2351284,77.40137482",
+          "longitude": 77.40137482,
+          "route": "SR1",
+          "station": "New Market,Top & Town"
+        },
+        {
+          "id": "SR1-15",
+          "latitude": 23.23191643,
+          "link": "https://www.google.com/maps/place/23.23191643,77.40145874",
+          "longitude": 77.40145874,
+          "route": "SR1",
+          "station": "Teen Shed"
+        },
+        {
+          "id": "SR1-16",
+          "latitude": 23.22461319,
+          "link": "https://www.google.com/maps/place/23.22461319,77.40226746",
+          "longitude": 77.40226746,
+          "route": "SR1",
+          "station": "Mata Mandir"
+        },
+        {
+          "id": "SR1-17",
+          "latitude": 23.22099304,
+          "link": "https://www.google.com/maps/place/23.22099304,77.40392303",
+          "longitude": 77.40392303,
+          "route": "SR1",
+          "station": "Mact Tiraha"
+        },
+        {
+          "id": "SR1-18",
+          "latitude": 23.22118187,
+          "link": "https://www.google.com/maps/place/23.22118187,77.40749359",
+          "longitude": 77.40749359,
+          "route": "SR1",
+          "station": "Harsh Vardhan Nagar"
+        },
+        {
+          "id": "SR1-19",
+          "latitude": 23.22072411,
+          "link": "https://www.google.com/maps/place/23.22072411,77.4103241",
+          "longitude": 77.4103241,
+          "route": "SR1",
+          "station": "Panchsheel Nagar"
+        },
+        {
+          "id": "SR1-20",
+          "latitude": 23.21935081,
+          "link": "https://www.google.com/maps/place/23.21935081,77.41407776",
+          "longitude": 77.41407776,
+          "route": "SR1",
+          "station": "Patrakar Colony"
+        },
+        {
+          "id": "SR1-21",
+          "latitude": 23.21714592,
+          "link": "https://www.google.com/maps/place/23.21714592,77.41736603",
+          "longitude": 77.41736603,
+          "route": "SR1",
+          "station": "Kolar Tiraha"
+        },
+        {
+          "id": "SR1-22",
+          "latitude": 23.21393013,
+          "link": "https://www.google.com/maps/place/23.21393013,77.41918182",
+          "longitude": 77.41918182,
+          "route": "SR1",
+          "station": "Buddh Mandir"
+        },
+        {
+          "id": "SR1-23",
+          "latitude": 23.21035194,
+          "link": "https://www.google.com/maps/place/23.21035194,77.41869354",
+          "longitude": 77.41869354,
+          "route": "SR1",
+          "station": "Chinar Woodland"
+        },
+        {
+          "id": "SR1-24",
+          "latitude": 23.20840454,
+          "link": "https://www.google.com/maps/place/23.20840454,77.41809082",
+          "longitude": 77.41809082,
+          "route": "SR1",
+          "station": "Suyash Hospital"
+        },
+        {
+          "id": "SR1-25",
+          "latitude": 23.20735359,
+          "link": "https://www.google.com/maps/place/23.20735359,77.41794586",
+          "longitude": 77.41794586,
+          "route": "SR1",
+          "station": "Deepak Socity"
+        },
+        {
+          "id": "SR1-26",
+          "latitude": 23.20380783,
+          "link": "https://www.google.com/maps/place/23.20380783,77.41159058",
+          "longitude": 77.41159058,
+          "route": "SR1",
+          "station": "Nahar Puliya"
+        },
+        {
+          "id": "SR1-27",
+          "latitude": 23.18905067,
+          "link": "https://www.google.com/maps/place/23.18905067,77.41722107",
+          "longitude": 77.41722107,
+          "route": "SR1",
+          "station": "Sarvadharma Colony"
+        },
+        {
+          "id": "SR1-28",
+          "latitude": 23.18140984,
+          "link": "https://www.google.com/maps/place/23.18140984,77.40851593",
+          "longitude": 77.40851593,
+          "route": "SR1",
+          "station": "Mahabali Nagar"
+        },
+        {
+          "id": "SR1-29",
+          "latitude": 23.17947769,
+          "link": "https://www.google.com/maps/place/23.17947769,77.41843414",
+          "longitude": 77.41843414,
+          "route": "SR1",
+          "station": "Beema Kunj"
+        },
+        {
+          "id": "SR1-30",
+          "latitude": 23.17263985,
+          "link": "https://www.google.com/maps/place/23.17263985,77.41699219",
+          "longitude": 77.41699219,
+          "route": "SR1",
+          "station": "Nayapura Colony"
+        },
+        {
+          "id": "SR1-31",
+          "latitude": 23.16539001,
+          "link": "https://www.google.com/maps/place/23.16539001,77.41527557",
+          "longitude": 77.41527557,
+          "route": "SR1",
+          "station": "Lalita Nagar"
+        },
+        {
+          "id": "SR1-32",
+          "latitude": 23.16161156,
+          "link": "https://www.google.com/maps/place/23.16161156,77.41426849",
+          "longitude": 77.41426849,
+          "route": "SR1",
+          "station": "Nahar(Sanskar Gardan)"
+        },
+        {
+          "id": "SR1-33",
+          "latitude": 23.15826225,
+          "link": "https://www.google.com/maps/place/23.15826225,77.4135437",
+          "longitude": 77.4135437,
+          "route": "SR1",
+          "station": "Gainhu Kheda"
+        },
+        {
+          "id": "SR1-34",
+          "latitude": 23.1499958,
+          "link": "https://www.google.com/maps/place/23.1499958,77.41099548",
+          "longitude": 77.41099548,
+          "route": "SR1",
+          "station": "Chinchli Bairagarh"
+        },
+        {
+          "id": "SR2-1",
+          "latitude": 23.2652874,
+          "link": "https://www.google.com/maps/place/23.2652874,77.40531921",
+          "longitude": 77.40531921,
+          "route": "SR2",
+          "station": "Nadra Bus Stand"
+        },
+        {
+          "id": "SR2-2",
+          "latitude": 23.26443863,
+          "link": "https://www.google.com/maps/place/23.26443863,77.40631866",
+          "longitude": 77.40631866,
+          "route": "SR2",
+          "station": "Sabji Mandi"
+        },
+        {
+          "id": "SR2-3",
+          "latitude": 23.26436806,
+          "link": "https://www.google.com/maps/place/23.26436806,77.41020203",
+          "longitude": 77.41020203,
+          "route": "SR2",
+          "station": "Alpana Tiraha"
+        },
+        {
+          "id": "SR2-4",
+          "latitude": 23.26047707,
+          "link": "https://www.google.com/maps/place/23.26047707,77.41085815",
+          "longitude": 77.41085815,
+          "route": "SR2",
+          "station": "Bharat Talkies"
+        },
+        {
+          "id": "SR2-5",
+          "latitude": 23.25906372,
+          "link": "https://www.google.com/maps/place/23.25906372,77.41123962",
+          "longitude": 77.41123962,
+          "route": "SR2",
+          "station": "Bharat Talkies 2"
+        },
+        {
+          "id": "SR2-6",
+          "latitude": 23.25801277,
+          "link": "https://www.google.com/maps/place/23.25801277,77.41442108",
+          "longitude": 77.41442108,
+          "route": "SR2",
+          "station": "Patra Pul"
+        },
+        {
+          "id": "SR2-7",
+          "latitude": 23.25583267,
+          "link": "https://www.google.com/maps/place/23.25583267,77.41832733",
+          "longitude": 77.41832733,
+          "route": "SR2",
+          "station": "Barkhedi Rc"
+        },
+        {
+          "id": "SR2-8",
+          "latitude": 23.25497627,
+          "link": "https://www.google.com/maps/place/23.25497627,77.41954803",
+          "longitude": 77.41954803,
+          "route": "SR2",
+          "station": "Upaj Mandi"
+        },
+        {
+          "id": "SR2-9",
+          "latitude": 23.2527523,
+          "link": "https://www.google.com/maps/place/23.2527523,77.42272949",
+          "longitude": 77.42272949,
+          "route": "SR2",
+          "station": "Bogda Pul"
+        },
+        {
+          "id": "SR2-10",
+          "latitude": 23.250103,
+          "link": "https://www.google.com/maps/place/23.250103,77.42388916",
+          "longitude": 77.42388916,
+          "route": "SR2",
+          "station": "Jinsi Tiraha"
+        },
+        {
+          "id": "SR2-11",
+          "latitude": 23.24654961,
+          "link": "https://www.google.com/maps/place/23.24654961,77.43169403",
+          "longitude": 77.43169403,
+          "route": "SR2",
+          "station": "Subhash R/Fatak"
+        },
+        {
+          "id": "SR2-12",
+          "latitude": 23.24397087,
+          "link": "https://www.google.com/maps/place/23.24397087,77.43269348",
+          "longitude": 77.43269348,
+          "route": "SR2",
+          "station": "Sbi Lho"
+        },
+        {
+          "id": "SR2-13",
+          "latitude": 23.23867226,
+          "link": "https://www.google.com/maps/place/23.23867226,77.43112183",
+          "longitude": 77.43112183,
+          "route": "SR2",
+          "station": "Post Office"
+        },
+        {
+          "id": "SR2-14",
+          "latitude": 23.23369026,
+          "link": "https://www.google.com/maps/place/23.23369026,77.43019104",
+          "longitude": 77.43019104,
+          "route": "SR2",
+          "station": "D B Mall"
+        },
+        {
+          "id": "SR2-15",
+          "latitude": 23.23129463,
+          "link": "https://www.google.com/maps/place/23.23129463,77.43256378",
+          "longitude": 77.43256378,
+          "route": "SR2",
+          "station": "Board Office (Milan)"
+        },
+        {
+          "id": "SR2-16",
+          "latitude": 23.23279381,
+          "link": "https://www.google.com/maps/place/23.23279381,77.4342804",
+          "longitude": 77.4342804,
+          "route": "SR2",
+          "station": "Jyoti Tlk. Top & Toun"
+        },
+        {
+          "id": "SR2-17",
+          "latitude": 23.23284149,
+          "link": "https://www.google.com/maps/place/23.23284149,77.44184113",
+          "longitude": 77.44184113,
+          "route": "SR2",
+          "station": "Kasturwa Nagar"
+        },
+        {
+          "id": "SR2-18",
+          "latitude": 23.22909546,
+          "link": "https://www.google.com/maps/place/23.22909546,77.44200134",
+          "longitude": 77.44200134,
+          "route": "SR2",
+          "station": "Isbt"
+        },
+        {
+          "id": "SR2-19",
+          "latitude": 23.22394371,
+          "link": "https://www.google.com/maps/place/23.22394371,77.44197083",
+          "longitude": 77.44197083,
+          "route": "SR2",
+          "station": "Duth Deri"
+        },
+        {
+          "id": "SR2-20",
+          "latitude": 23.22126961,
+          "link": "https://www.google.com/maps/place/23.22126961,77.44203949",
+          "longitude": 77.44203949,
+          "route": "SR2",
+          "station": "Habibganj R/Station"
+        },
+        {
+          "id": "SR2-21",
+          "latitude": 23.21614647,
+          "link": "https://www.google.com/maps/place/23.21614647,77.44187164",
+          "longitude": 77.44187164,
+          "route": "SR2",
+          "station": "Habibganj Naka"
+        },
+        {
+          "id": "SR2-22",
+          "latitude": 23.21052742,
+          "link": "https://www.google.com/maps/place/23.21052742,77.44392395",
+          "longitude": 77.44392395,
+          "route": "SR2",
+          "station": "Rrl"
+        },
+        {
+          "id": "SR2-23",
+          "latitude": 23.20410919,
+          "link": "https://www.google.com/maps/place/23.20410919,77.44606018",
+          "longitude": 77.44606018,
+          "route": "SR2",
+          "station": "Narayan Nagar"
+        },
+        {
+          "id": "SR2-24",
+          "latitude": 23.1991787,
+          "link": "https://www.google.com/maps/place/23.1991787,77.44781494",
+          "longitude": 77.44781494,
+          "route": "SR2",
+          "station": "University"
+        },
+        {
+          "id": "SR2-25",
+          "latitude": 23.19544601,
+          "link": "https://www.google.com/maps/place/23.19544601,77.44924927",
+          "longitude": 77.44924927,
+          "route": "SR2",
+          "station": "Vidya Nagar"
+        },
+        {
+          "id": "SR2-26",
+          "latitude": 23.1860981,
+          "link": "https://www.google.com/maps/place/23.1860981,77.45415497",
+          "longitude": 77.45415497,
+          "route": "SR2",
+          "station": "Nikhil Homes"
+        },
+        {
+          "id": "SR2-27",
+          "latitude": 23.17489243,
+          "link": "https://www.google.com/maps/place/23.17489243,77.46015167",
+          "longitude": 77.46015167,
+          "route": "SR2",
+          "station": "Vrindavan Dawa"
+        },
+        {
+          "id": "SR2-28",
+          "latitude": 23.16836929,
+          "link": "https://www.google.com/maps/place/23.16836929,77.46434784",
+          "longitude": 77.46434784,
+          "route": "SR2",
+          "station": "Jatkhedi"
+        },
+        {
+          "id": "SR2-29",
+          "latitude": 23.16177368,
+          "link": "https://www.google.com/maps/place/23.16177368,77.46949005",
+          "longitude": 77.46949005,
+          "route": "SR2",
+          "station": "Misrod"
+        },
+        {
+          "id": "SR2-30",
+          "latitude": 23.15298653,
+          "link": "https://www.google.com/maps/place/23.15298653,77.47598267",
+          "longitude": 77.47598267,
+          "route": "SR2",
+          "station": "Scope Collage"
+        },
+        {
+          "id": "SR2-31",
+          "latitude": 23.14868927,
+          "link": "https://www.google.com/maps/place/23.14868927,77.47901917",
+          "longitude": 77.47901917,
+          "route": "SR2",
+          "station": "11 Miles"
+        },
+        {
+          "id": "SR2-32",
+          "latitude": 23.1418457,
+          "link": "https://www.google.com/maps/place/23.1418457,77.48423004",
+          "longitude": 77.48423004,
+          "route": "SR2",
+          "station": "Fun City"
+        },
+        {
+          "id": "SR2-33",
+          "latitude": 23.13746643,
+          "link": "https://www.google.com/maps/place/23.13746643,77.48442078",
+          "longitude": 77.48442078,
+          "route": "SR2",
+          "station": "Indus Town"
+        },
+        {
+          "id": "SR2-34",
+          "latitude": 23.11799049,
+          "link": "https://www.google.com/maps/place/23.11799049,77.50205231",
+          "longitude": 77.50205231,
+          "route": "SR2",
+          "station": "Samardha"
+        },
+        {
+          "id": "SR3-1",
+          "latitude": 23.28458023,
+          "link": "https://www.google.com/maps/place/23.28458023,77.39729309",
+          "longitude": 77.39729309,
+          "route": "SR3",
+          "station": "Nariyal Kheda I"
+        },
+        {
+          "id": "SR3-2",
+          "latitude": 23.28339767,
+          "link": "https://www.google.com/maps/place/23.28339767,77.39651489",
+          "longitude": 77.39651489,
+          "route": "SR3",
+          "station": "Nariyal Kheda Ii"
+        },
+        {
+          "id": "SR3-3",
+          "latitude": 23.28057861,
+          "link": "https://www.google.com/maps/place/23.28057861,77.39465332",
+          "longitude": 77.39465332,
+          "route": "SR3",
+          "station": "Miltri Gate"
+        },
+        {
+          "id": "SR3-4",
+          "latitude": 23.28057861,
+          "link": "https://www.google.com/maps/place/23.28057861,77.39743805",
+          "longitude": 77.39743805,
+          "route": "SR3",
+          "station": "Tila Jamal Pura"
+        },
+        {
+          "id": "SR3-5",
+          "latitude": 23.28072548,
+          "link": "https://www.google.com/maps/place/23.28072548,77.39923096",
+          "longitude": 77.39923096,
+          "route": "SR3",
+          "station": "Gitanjali College"
+        },
+        {
+          "id": "SR3-6",
+          "latitude": 23.27911949,
+          "link": "https://www.google.com/maps/place/23.27911949,77.40231323",
+          "longitude": 77.40231323,
+          "route": "SR3",
+          "station": "Jawahar Lal Nehru Hos"
+        },
+        {
+          "id": "SR3-7",
+          "latitude": 23.27835083,
+          "link": "https://www.google.com/maps/place/23.27835083,77.40346527",
+          "longitude": 77.40346527,
+          "route": "SR3",
+          "station": "Dig Bunglow"
+        },
+        {
+          "id": "SR3-8",
+          "latitude": 23.27482414,
+          "link": "https://www.google.com/maps/place/23.27482414,77.40249634",
+          "longitude": 77.40249634,
+          "route": "SR3",
+          "station": "Kaji Camp"
+        },
+        {
+          "id": "SR3-9",
+          "latitude": 23.27091599,
+          "link": "https://www.google.com/maps/place/23.27091599,77.40044403",
+          "longitude": 77.40044403,
+          "route": "SR3",
+          "station": "Sindi Colony"
+        },
+        {
+          "id": "SR3-10",
+          "latitude": 23.26757622,
+          "link": "https://www.google.com/maps/place/23.26757622,77.40079498",
+          "longitude": 77.40079498,
+          "route": "SR3",
+          "station": "Bhopal Talkies"
+        },
+        {
+          "id": "SR3-11",
+          "latitude": 23.2652874,
+          "link": "https://www.google.com/maps/place/23.2652874,77.40531921",
+          "longitude": 77.40531921,
+          "route": "SR3",
+          "station": "Nadra Bus Stand"
+        },
+        {
+          "id": "SR3-12",
+          "latitude": 23.26443863,
+          "link": "https://www.google.com/maps/place/23.26443863,77.40631866",
+          "longitude": 77.40631866,
+          "route": "SR3",
+          "station": "Sabji Mandi"
+        },
+        {
+          "id": "SR3-13",
+          "latitude": 23.26436806,
+          "link": "https://www.google.com/maps/place/23.26436806,77.41020203",
+          "longitude": 77.41020203,
+          "route": "SR3",
+          "station": "Alpana Tiraha"
+        },
+        {
+          "id": "SR3-14",
+          "latitude": 23.26047707,
+          "link": "https://www.google.com/maps/place/23.26047707,77.41085815",
+          "longitude": 77.41085815,
+          "route": "SR3",
+          "station": "Bharat Talkies"
+        },
+        {
+          "id": "SR3-15",
+          "latitude": 23.25993347,
+          "link": "https://www.google.com/maps/place/23.25993347,77.41261292",
+          "longitude": 77.41261292,
+          "route": "SR3",
+          "station": "Ajabghar"
+        },
+        {
+          "id": "SR3-16",
+          "latitude": 23.25993347,
+          "link": "https://www.google.com/maps/place/23.25993347,77.41261292",
+          "longitude": 77.41261292,
+          "route": "SR3",
+          "station": "Lady Hospital"
+        },
+        {
+          "id": "SR3-17",
+          "latitude": 23.25225258,
+          "link": "https://www.google.com/maps/place/23.25225258,77.41423798",
+          "longitude": 77.41423798,
+          "route": "SR3",
+          "station": "Jehangirabad"
+        },
+        {
+          "id": "SR3-18",
+          "latitude": 23.24808693,
+          "link": "https://www.google.com/maps/place/23.24808693,77.41262817",
+          "longitude": 77.41262817,
+          "route": "SR3",
+          "station": "Phq"
+        },
+        {
+          "id": "SR3-19",
+          "latitude": 23.24339485,
+          "link": "https://www.google.com/maps/place/23.24339485,77.4096756",
+          "longitude": 77.4096756,
+          "route": "SR3",
+          "station": "Police Control Room"
+        },
+        {
+          "id": "SR3-20",
+          "latitude": 23.242836,
+          "link": "https://www.google.com/maps/place/23.242836,77.40871429",
+          "longitude": 77.40871429,
+          "route": "SR3",
+          "station": "Old Vidhan Sabha"
+        },
+        {
+          "id": "SR3-21",
+          "latitude": 23.23756409,
+          "link": "https://www.google.com/maps/place/23.23756409,77.40115356",
+          "longitude": 77.40115356,
+          "route": "SR3",
+          "station": "Roshanpura"
+        },
+        {
+          "id": "SR3-22",
+          "latitude": 23.23516846,
+          "link": "https://www.google.com/maps/place/23.23516846,77.40137482",
+          "longitude": 77.40137482,
+          "route": "SR3",
+          "station": "New Market,Top&Town"
+        },
+        {
+          "id": "SR3-23",
+          "latitude": 23.23270798,
+          "link": "https://www.google.com/maps/place/23.23270798,77.41160583",
+          "longitude": 77.41160583,
+          "route": "SR3",
+          "station": "Prakash Tarun Pushkar"
+        },
+        {
+          "id": "SR3-24",
+          "latitude": 23.23146248,
+          "link": "https://www.google.com/maps/place/23.23146248,77.41585541",
+          "longitude": 77.41585541,
+          "route": "SR3",
+          "station": "1250 Hospital"
+        },
+        {
+          "id": "SR3-25",
+          "latitude": 23.23126602,
+          "link": "https://www.google.com/maps/place/23.23126602,77.42153931",
+          "longitude": 77.42153931,
+          "route": "SR3",
+          "station": "Cangress Bhawan"
+        },
+        {
+          "id": "SR3-26",
+          "latitude": 23.23079109,
+          "link": "https://www.google.com/maps/place/23.23079109,77.42773438",
+          "longitude": 77.42773438,
+          "route": "SR3",
+          "station": "Vyapam"
+        },
+        {
+          "id": "SR3-27",
+          "latitude": 23.23130417,
+          "link": "https://www.google.com/maps/place/23.23130417,77.43261719",
+          "longitude": 77.43261719,
+          "route": "SR3",
+          "station": "Board Office(Milan)"
+        },
+        {
+          "id": "SR3-28",
+          "latitude": 23.2332058,
+          "link": "https://www.google.com/maps/place/23.2332058,77.43466187",
+          "longitude": 77.43466187,
+          "route": "SR3",
+          "station": "Jyoti Talkies"
+        },
+        {
+          "id": "SR3-29",
+          "latitude": 23.22909546,
+          "link": "https://www.google.com/maps/place/23.22909546,77.44200134",
+          "longitude": 77.44200134,
+          "route": "SR3",
+          "station": "Isbt"
+        },
+        {
+          "id": "SR3-30",
+          "latitude": 23.23284149,
+          "link": "https://www.google.com/maps/place/23.23284149,77.44184113",
+          "longitude": 77.44184113,
+          "route": "SR3",
+          "station": "Kasturwa Nagar"
+        },
+        {
+          "id": "SR3-31",
+          "latitude": 23.23412514,
+          "link": "https://www.google.com/maps/place/23.23412514,77.44158173",
+          "longitude": 77.44158173,
+          "route": "SR3",
+          "station": "Goutam Nagar"
+        },
+        {
+          "id": "SR3-32",
+          "latitude": 23.23427582,
+          "link": "https://www.google.com/maps/place/23.23427582,77.44258881",
+          "longitude": 77.44258881,
+          "route": "SR3",
+          "station": "Shanti Niketan"
+        },
+        {
+          "id": "SR3-33",
+          "latitude": 23.24155045,
+          "link": "https://www.google.com/maps/place/23.24155045,77.44004822",
+          "longitude": 77.44004822,
+          "route": "SR3",
+          "station": "Janta Quatar"
+        },
+        {
+          "id": "SR3-34",
+          "latitude": 23.24440575,
+          "link": "https://www.google.com/maps/place/23.24440575,77.4357605",
+          "longitude": 77.4357605,
+          "route": "SR3",
+          "station": "Sant Pitar Charch"
+        },
+        {
+          "id": "SR3-35",
+          "latitude": 23.24682045,
+          "link": "https://www.google.com/maps/place/23.24682045,77.43184662",
+          "longitude": 77.43184662,
+          "route": "SR3",
+          "station": "Subhas Fatak"
+        },
+        {
+          "id": "SR3-36",
+          "latitude": 23.25223732,
+          "link": "https://www.google.com/maps/place/23.25223732,77.43135071",
+          "longitude": 77.43135071,
+          "route": "SR3",
+          "station": "Prabhat Petrol Pump"
+        },
+        {
+          "id": "SR3-37",
+          "latitude": 23.25314903,
+          "link": "https://www.google.com/maps/place/23.25314903,77.43582153",
+          "longitude": 77.43582153,
+          "route": "SR3",
+          "station": "Punjabi Bagh"
+        },
+        {
+          "id": "SR3-38",
+          "latitude": 23.25498009,
+          "link": "https://www.google.com/maps/place/23.25498009,77.4407959",
+          "longitude": 77.4407959,
+          "route": "SR3",
+          "station": "Bijli Colony"
+        },
+        {
+          "id": "SR3-39",
+          "latitude": 23.2472229,
+          "link": "https://www.google.com/maps/place/23.2472229,77.44438171",
+          "longitude": 77.44438171,
+          "route": "SR3",
+          "station": "Govind Pura"
+        },
+        {
+          "id": "SR3-40",
+          "latitude": 23.25288773,
+          "link": "https://www.google.com/maps/place/23.25288773,77.44729614",
+          "longitude": 77.44729614,
+          "route": "SR3",
+          "station": "Industrial Gate"
+        },
+        {
+          "id": "SR3-41",
+          "latitude": 23.25247955,
+          "link": "https://www.google.com/maps/place/23.25247955,77.44995117",
+          "longitude": 77.44995117,
+          "route": "SR3",
+          "station": "I.T.I."
+        },
+        {
+          "id": "SR3-42",
+          "latitude": 23.25149345,
+          "link": "https://www.google.com/maps/place/23.25149345,77.45642853",
+          "longitude": 77.45642853,
+          "route": "SR3",
+          "station": "J.K. Road Tiraha"
+        },
+        {
+          "id": "SR3-43",
+          "latitude": 23.25102043,
+          "link": "https://www.google.com/maps/place/23.25102043,77.45980072",
+          "longitude": 77.45980072,
+          "route": "SR3",
+          "station": "Bhel Gate -1"
+        },
+        {
+          "id": "SR3-44",
+          "latitude": 23.25033951,
+          "link": "https://www.google.com/maps/place/23.25033951,77.46299744",
+          "longitude": 77.46299744,
+          "route": "SR3",
+          "station": "Jubli Gate \u2013 Bhel"
+        },
+        {
+          "id": "SR3-45",
+          "latitude": 23.24983215,
+          "link": "https://www.google.com/maps/place/23.24983215,77.46750641",
+          "longitude": 77.46750641,
+          "route": "SR3",
+          "station": "Bima Hospital"
+        },
+        {
+          "id": "SR3-46",
+          "latitude": 23.24910355,
+          "link": "https://www.google.com/maps/place/23.24910355,77.4718399",
+          "longitude": 77.4718399,
+          "route": "SR3",
+          "station": "Piplani Pump"
+        },
+        {
+          "id": "SR3-47",
+          "latitude": 23.24972725,
+          "link": "https://www.google.com/maps/place/23.24972725,77.47714996",
+          "longitude": 77.47714996,
+          "route": "SR3",
+          "station": "Kalpana Nagar"
+        },
+        {
+          "id": "SR3-48",
+          "latitude": 23.25010109,
+          "link": "https://www.google.com/maps/place/23.25010109,77.47882843",
+          "longitude": 77.47882843,
+          "route": "SR3",
+          "station": "Ratnagiri Bay Pass"
+        },
+        {
+          "id": "SR3-49",
+          "latitude": 23.25810432,
+          "link": "https://www.google.com/maps/place/23.25810432,77.47951508",
+          "longitude": 77.47951508,
+          "route": "SR3",
+          "station": "Prakash Nagar"
+        },
+        {
+          "id": "SR3-50",
+          "latitude": 23.2565937,
+          "link": "https://www.google.com/maps/place/23.2565937,77.48345947",
+          "longitude": 77.48345947,
+          "route": "SR3",
+          "station": "Rajiv Gandhi Nagar"
+        },
+        {
+          "id": "SR3-51",
+          "latitude": 23.26511574,
+          "link": "https://www.google.com/maps/place/23.26511574,77.47123718",
+          "longitude": 77.47123718,
+          "route": "SR3",
+          "station": "Century Garden"
+        },
+        {
+          "id": "SR3-52",
+          "latitude": 23.26877213,
+          "link": "https://www.google.com/maps/place/23.26877213,77.46886444",
+          "longitude": 77.46886444,
+          "route": "SR3",
+          "station": "Narela Snakri"
+        },
+        {
+          "id": "SR3-53",
+          "latitude": 23.27220726,
+          "link": "https://www.google.com/maps/place/23.27220726,77.46840668",
+          "longitude": 77.46840668,
+          "route": "SR3",
+          "station": "Sagar Avenue"
+        },
+        {
+          "id": "SR3-54",
+          "latitude": 23.27552223,
+          "link": "https://www.google.com/maps/place/23.27552223,77.46365356",
+          "longitude": 77.46365356,
+          "route": "SR3",
+          "station": "Ayodhya By Pass"
+        },
+        {
+          "id": "SR3-55",
+          "latitude": 23.27690315,
+          "link": "https://www.google.com/maps/place/23.27690315,77.46582794",
+          "longitude": 77.46582794,
+          "route": "SR3",
+          "station": "Gardan"
+        },
+        {
+          "id": "SR3-56",
+          "latitude": 23.27812576,
+          "link": "https://www.google.com/maps/place/23.27812576,77.46768951",
+          "longitude": 77.46768951,
+          "route": "SR3",
+          "station": "Ayodhya Nagar"
+        },
+        {
+          "id": "SR4-1",
+          "latitude": 23.1499958,
+          "link": "https://www.google.com/maps/place/23.1499958,77.41099548",
+          "longitude": 77.41099548,
+          "route": "SR4",
+          "station": "Chinchli Bairagarh"
+        },
+        {
+          "id": "SR4-2",
+          "latitude": 23.15826225,
+          "link": "https://www.google.com/maps/place/23.15826225,77.4135437",
+          "longitude": 77.4135437,
+          "route": "SR4",
+          "station": "Gainhu Kheda"
+        },
+        {
+          "id": "SR4-3",
+          "latitude": 23.16161156,
+          "link": "https://www.google.com/maps/place/23.16161156,77.41426849",
+          "longitude": 77.41426849,
+          "route": "SR4",
+          "station": "Nahar(Sanskar Gardan)"
+        },
+        {
+          "id": "SR4-4",
+          "latitude": 23.16539001,
+          "link": "https://www.google.com/maps/place/23.16539001,77.41527557",
+          "longitude": 77.41527557,
+          "route": "SR4",
+          "station": "Lalita Nagar"
+        },
+        {
+          "id": "SR4-5",
+          "latitude": 23.17263985,
+          "link": "https://www.google.com/maps/place/23.17263985,77.41699219",
+          "longitude": 77.41699219,
+          "route": "SR4",
+          "station": "Nayapura Colony"
+        },
+        {
+          "id": "SR4-6",
+          "latitude": 23.17947769,
+          "link": "https://www.google.com/maps/place/23.17947769,77.41843414",
+          "longitude": 77.41843414,
+          "route": "SR4",
+          "station": "Beema Kunj"
+        },
+        {
+          "id": "SR4-7",
+          "latitude": 23.18140984,
+          "link": "https://www.google.com/maps/place/23.18140984,77.40851593",
+          "longitude": 77.40851593,
+          "route": "SR4",
+          "station": "Mahabali Nagar"
+        },
+        {
+          "id": "SR4-8",
+          "latitude": 23.18905067,
+          "link": "https://www.google.com/maps/place/23.18905067,77.41722107",
+          "longitude": 77.41722107,
+          "route": "SR4",
+          "station": "Sarvadharma Colony"
+        },
+        {
+          "id": "SR4-9",
+          "latitude": 23.20380783,
+          "link": "https://www.google.com/maps/place/23.20380783,77.41159058",
+          "longitude": 77.41159058,
+          "route": "SR4",
+          "station": "Nahar Puliya"
+        },
+        {
+          "id": "SR4-10",
+          "latitude": 23.20633125,
+          "link": "https://www.google.com/maps/place/23.20633125,77.40326691",
+          "longitude": 77.40326691,
+          "route": "SR4",
+          "station": "Khushi Lal College"
+        },
+        {
+          "id": "SR4-11",
+          "latitude": 23.20876503,
+          "link": "https://www.google.com/maps/place/23.20876503,77.3976593",
+          "longitude": 77.3976593,
+          "route": "SR4",
+          "station": "Sabri Nagar"
+        },
+        {
+          "id": "SR4-12",
+          "latitude": 23.21052933,
+          "link": "https://www.google.com/maps/place/23.21052933,77.3948288",
+          "longitude": 77.3948288,
+          "route": "SR4",
+          "station": "Nehru Nagar"
+        },
+        {
+          "id": "SR4-13",
+          "latitude": 23.21845055,
+          "link": "https://www.google.com/maps/place/23.21845055,77.39165497",
+          "longitude": 77.39165497,
+          "route": "SR4",
+          "station": "Kamla Nagar/ Kotra"
+        },
+        {
+          "id": "SR4-14",
+          "latitude": 23.22070313,
+          "link": "https://www.google.com/maps/place/23.22070313,77.39237213",
+          "longitude": 77.39237213,
+          "route": "SR4",
+          "station": "Govt. Quarters"
+        },
+        {
+          "id": "SR4-15",
+          "latitude": 23.22612762,
+          "link": "https://www.google.com/maps/place/23.22612762,77.39253235",
+          "longitude": 77.39253235,
+          "route": "SR4",
+          "station": "P&T Chouraha"
+        },
+        {
+          "id": "SR4-16",
+          "latitude": 23.22879219,
+          "link": "https://www.google.com/maps/place/23.22879219,77.38852692",
+          "longitude": 77.38852692,
+          "route": "SR4",
+          "station": "City Depot"
+        },
+        {
+          "id": "SR4-17",
+          "latitude": 23.23161697,
+          "link": "https://www.google.com/maps/place/23.23161697,77.39391327",
+          "longitude": 77.39391327,
+          "route": "SR4",
+          "station": "Jawahar Chowk"
+        },
+        {
+          "id": "SR4-18",
+          "latitude": 23.23566055,
+          "link": "https://www.google.com/maps/place/23.23566055,77.39877319",
+          "longitude": 77.39877319,
+          "route": "SR4",
+          "station": "Rangmahal"
+        },
+        {
+          "id": "SR4-19",
+          "latitude": 23.23756409,
+          "link": "https://www.google.com/maps/place/23.23756409,77.40115356",
+          "longitude": 77.40115356,
+          "route": "SR4",
+          "station": "Roshanpura"
+        },
+        {
+          "id": "SR4-20",
+          "latitude": 23.242836,
+          "link": "https://www.google.com/maps/place/23.242836,77.40871429",
+          "longitude": 77.40871429,
+          "route": "SR4",
+          "station": "Old Vidhan Sabha"
+        },
+        {
+          "id": "SR4-21",
+          "latitude": 23.24808693,
+          "link": "https://www.google.com/maps/place/23.24808693,77.41262817",
+          "longitude": 77.41262817,
+          "route": "SR4",
+          "station": "Phq"
+        },
+        {
+          "id": "SR4-22",
+          "latitude": 23.24339485,
+          "link": "https://www.google.com/maps/place/23.24339485,77.4096756",
+          "longitude": 77.4096756,
+          "route": "SR4",
+          "station": "Police Control Room"
+        },
+        {
+          "id": "SR4-23",
+          "latitude": 23.25225258,
+          "link": "https://www.google.com/maps/place/23.25225258,77.41423798",
+          "longitude": 77.41423798,
+          "route": "SR4",
+          "station": "Jehangirabad"
+        },
+        {
+          "id": "SR4-24",
+          "latitude": 23.25993347,
+          "link": "https://www.google.com/maps/place/23.25993347,77.41261292",
+          "longitude": 77.41261292,
+          "route": "SR4",
+          "station": "Lady Hospital"
+        },
+        {
+          "id": "SR4-25",
+          "latitude": 23.25993347,
+          "link": "https://www.google.com/maps/place/23.25993347,77.41261292",
+          "longitude": 77.41261292,
+          "route": "SR4",
+          "station": "Ajabghar"
+        },
+        {
+          "id": "SR4-26",
+          "latitude": 23.26047707,
+          "link": "https://www.google.com/maps/place/23.26047707,77.41085815",
+          "longitude": 77.41085815,
+          "route": "SR4",
+          "station": "Bharat Talkies"
+        },
+        {
+          "id": "SR4-27",
+          "latitude": 23.26436806,
+          "link": "https://www.google.com/maps/place/23.26436806,77.41020203",
+          "longitude": 77.41020203,
+          "route": "SR4",
+          "station": "Alpana Tiraha"
+        },
+        {
+          "id": "SR4-28",
+          "latitude": 23.26443863,
+          "link": "https://www.google.com/maps/place/23.26443863,77.40631866",
+          "longitude": 77.40631866,
+          "route": "SR4",
+          "station": "Sabji Mandi"
+        },
+        {
+          "id": "SR4-29",
+          "latitude": 23.2652874,
+          "link": "https://www.google.com/maps/place/23.2652874,77.40531921",
+          "longitude": 77.40531921,
+          "route": "SR4",
+          "station": "Nadra Bus Stand"
+        },
+        {
+          "id": "SR4-30",
+          "latitude": 23.26757622,
+          "link": "https://www.google.com/maps/place/23.26757622,77.40079498",
+          "longitude": 77.40079498,
+          "route": "SR4",
+          "station": "Bhopal Talkies"
+        },
+        {
+          "id": "SR4-31",
+          "latitude": 23.27091599,
+          "link": "https://www.google.com/maps/place/23.27091599,77.40044403",
+          "longitude": 77.40044403,
+          "route": "SR4",
+          "station": "Sindi Colony"
+        },
+        {
+          "id": "SR4-32",
+          "latitude": 23.27482414,
+          "link": "https://www.google.com/maps/place/23.27482414,77.40249634",
+          "longitude": 77.40249634,
+          "route": "SR4",
+          "station": "Kaji Camp"
+        },
+        {
+          "id": "SR4-33",
+          "latitude": 23.27835083,
+          "link": "https://www.google.com/maps/place/23.27835083,77.40346527",
+          "longitude": 77.40346527,
+          "route": "SR4",
+          "station": "Dig Bunglow"
+        },
+        {
+          "id": "SR4-34",
+          "latitude": 23.28089714,
+          "link": "https://www.google.com/maps/place/23.28089714,77.40851593",
+          "longitude": 77.40851593,
+          "route": "SR4",
+          "station": "Arif Nagar"
+        },
+        {
+          "id": "SR4-35",
+          "latitude": 23.29141235,
+          "link": "https://www.google.com/maps/place/23.29141235,77.40353394",
+          "longitude": 77.40353394,
+          "route": "SR4",
+          "station": "Krishi Upaj Mandi"
+        },
+        {
+          "id": "SR4-36",
+          "latitude": 23.2954483,
+          "link": "https://www.google.com/maps/place/23.2954483,77.40381622",
+          "longitude": 77.40381622,
+          "route": "SR4",
+          "station": "Housing Colony"
+        },
+        {
+          "id": "SR4-37",
+          "latitude": 23.30279541,
+          "link": "https://www.google.com/maps/place/23.30279541,77.40448761",
+          "longitude": 77.40448761,
+          "route": "SR4",
+          "station": "Karound Chouraha"
+        },
+        {
+          "id": "SR4-38",
+          "latitude": 23.30322456,
+          "link": "https://www.google.com/maps/place/23.30322456,77.41717529",
+          "longitude": 77.41717529,
+          "route": "SR4",
+          "station": "Bhopal Memorial Hs"
+        },
+        {
+          "id": "SR4-39",
+          "latitude": 23.30254173,
+          "link": "https://www.google.com/maps/place/23.30254173,77.42285919",
+          "longitude": 77.42285919,
+          "route": "SR4",
+          "station": "Peoples College No.2"
+        },
+        {
+          "id": "SR4-40",
+          "latitude": 23.30254173,
+          "link": "https://www.google.com/maps/place/23.30254173,77.42285919",
+          "longitude": 77.42285919,
+          "route": "SR4",
+          "station": "Peoples College No.1"
+        },
+        {
+          "id": "SR4-41",
+          "latitude": 23.27264977,
+          "link": "https://www.google.com/maps/place/23.27264977,77.46592712",
+          "longitude": 77.46592712,
+          "route": "SR4",
+          "station": "Over Bridge Circal"
+        },
+        {
+          "id": "SR5-1",
+          "latitude": 23.2658577,
+          "link": "https://www.google.com/maps/place/23.2658577,77.3105545",
+          "longitude": 77.3105545,
+          "route": "SR5",
+          "station": "Chiraiu Hospital"
+        },
+        {
+          "id": "SR5-2",
+          "latitude": 23.29883385,
+          "link": "https://www.google.com/maps/place/23.29883385,77.34618378",
+          "longitude": 77.34618378,
+          "route": "SR5",
+          "station": "Nai Basti"
+        },
+        {
+          "id": "SR5-3",
+          "latitude": 23.32309532,
+          "link": "https://www.google.com/maps/place/23.32309532,77.36976624",
+          "longitude": 77.36976624,
+          "route": "SR5",
+          "station": "Baisha Khedi"
+        },
+        {
+          "id": "SR5-4",
+          "latitude": 23.27388763,
+          "link": "https://www.google.com/maps/place/23.27388763,77.3223877",
+          "longitude": 77.3223877,
+          "route": "SR5",
+          "station": "Bairagarh Kala"
+        },
+        {
+          "id": "SR5-5",
+          "latitude": 23.27384949,
+          "link": "https://www.google.com/maps/place/23.27384949,77.33647919",
+          "longitude": 77.33647919,
+          "route": "SR5",
+          "station": "Bairagarh Station"
+        },
+        {
+          "id": "SR5-6",
+          "latitude": 23.27164459,
+          "link": "https://www.google.com/maps/place/23.27164459,77.34195709",
+          "longitude": 77.34195709,
+          "route": "SR5",
+          "station": "Bairagarh Bus Staind"
+        },
+        {
+          "id": "SR5-7",
+          "latitude": 23.27383423,
+          "link": "https://www.google.com/maps/place/23.27383423,77.36322021",
+          "longitude": 77.36322021,
+          "route": "SR5",
+          "station": "Halalpur Bus Staind"
+        },
+        {
+          "id": "SR5-8",
+          "latitude": 23.27306938,
+          "link": "https://www.google.com/maps/place/23.27306938,77.36846924",
+          "longitude": 77.36846924,
+          "route": "SR5",
+          "station": "Lalghati"
+        },
+        {
+          "id": "SR5-9",
+          "latitude": 23.27131844,
+          "link": "https://www.google.com/maps/place/23.27131844,77.37574005",
+          "longitude": 77.37574005,
+          "route": "SR5",
+          "station": "Vip Guest"
+        },
+        {
+          "id": "SR5-10",
+          "latitude": 23.26911736,
+          "link": "https://www.google.com/maps/place/23.26911736,77.37727356",
+          "longitude": 77.37727356,
+          "route": "SR5",
+          "station": "Koh-E-Fiza"
+        },
+        {
+          "id": "SR5-11",
+          "latitude": 23.26358795,
+          "link": "https://www.google.com/maps/place/23.26358795,77.38312531",
+          "longitude": 77.38312531,
+          "route": "SR5",
+          "station": "Collectorate"
+        },
+        {
+          "id": "SR5-12",
+          "latitude": 23.26187897,
+          "link": "https://www.google.com/maps/place/23.26187897,77.38874054",
+          "longitude": 77.38874054,
+          "route": "SR5",
+          "station": "Sbi Chouraha"
+        },
+        {
+          "id": "SR5-13",
+          "latitude": 23.26150322,
+          "link": "https://www.google.com/maps/place/23.26150322,77.39205933",
+          "longitude": 77.39205933,
+          "route": "SR5",
+          "station": "Royal Market"
+        },
+        {
+          "id": "SR5-14",
+          "latitude": 23.26335526,
+          "link": "https://www.google.com/maps/place/23.26335526,77.39372253",
+          "longitude": 77.39372253,
+          "route": "SR5",
+          "station": "Gpo"
+        },
+        {
+          "id": "SR5-15",
+          "latitude": 23.26686478,
+          "link": "https://www.google.com/maps/place/23.26686478,77.39318848",
+          "longitude": 77.39318848,
+          "route": "SR5",
+          "station": "Taj Mahal/Shahjanawad"
+        },
+        {
+          "id": "SR5-16",
+          "latitude": 23.26757622,
+          "link": "https://www.google.com/maps/place/23.26757622,77.40079498",
+          "longitude": 77.40079498,
+          "route": "SR5",
+          "station": "Bhopal Talkies"
+        },
+        {
+          "id": "SR5-17",
+          "latitude": 23.2652874,
+          "link": "https://www.google.com/maps/place/23.2652874,77.40531921",
+          "longitude": 77.40531921,
+          "route": "SR5",
+          "station": "Nadra Bus Stand"
+        },
+        {
+          "id": "SR5-18",
+          "latitude": 23.26443863,
+          "link": "https://www.google.com/maps/place/23.26443863,77.40631866",
+          "longitude": 77.40631866,
+          "route": "SR5",
+          "station": "Sabji Mandi"
+        },
+        {
+          "id": "SR5-19",
+          "latitude": 23.26436806,
+          "link": "https://www.google.com/maps/place/23.26436806,77.41020203",
+          "longitude": 77.41020203,
+          "route": "SR5",
+          "station": "Alpana Tiraha"
+        },
+        {
+          "id": "SR5-20",
+          "latitude": 23.26047707,
+          "link": "https://www.google.com/maps/place/23.26047707,77.41085815",
+          "longitude": 77.41085815,
+          "route": "SR5",
+          "station": "Bharat Talkies"
+        },
+        {
+          "id": "SR5-21",
+          "latitude": 23.25993347,
+          "link": "https://www.google.com/maps/place/23.25993347,77.41261292",
+          "longitude": 77.41261292,
+          "route": "SR5",
+          "station": "Ajabghar"
+        },
+        {
+          "id": "SR5-22",
+          "latitude": 23.25993347,
+          "link": "https://www.google.com/maps/place/23.25993347,77.41261292",
+          "longitude": 77.41261292,
+          "route": "SR5",
+          "station": "Lady Hospital"
+        },
+        {
+          "id": "SR5-23",
+          "latitude": 23.25225258,
+          "link": "https://www.google.com/maps/place/23.25225258,77.41423798",
+          "longitude": 77.41423798,
+          "route": "SR5",
+          "station": "Jehangirabad"
+        },
+        {
+          "id": "SR5-24",
+          "latitude": 23.24808693,
+          "link": "https://www.google.com/maps/place/23.24808693,77.41262817",
+          "longitude": 77.41262817,
+          "route": "SR5",
+          "station": "Phq"
+        },
+        {
+          "id": "SR5-25",
+          "latitude": 23.24339485,
+          "link": "https://www.google.com/maps/place/23.24339485,77.4096756",
+          "longitude": 77.4096756,
+          "route": "SR5",
+          "station": "Police Control Room"
+        },
+        {
+          "id": "SR5-26",
+          "latitude": 23.242836,
+          "link": "https://www.google.com/maps/place/23.242836,77.40871429",
+          "longitude": 77.40871429,
+          "route": "SR5",
+          "station": "Old Vidhan Sabha"
+        },
+        {
+          "id": "SR5-27",
+          "latitude": 23.24048996,
+          "link": "https://www.google.com/maps/place/23.24048996,77.40636444",
+          "longitude": 77.40636444,
+          "route": "SR5",
+          "station": "Airtel Office (Malviya Nagar)"
+        },
+        {
+          "id": "SR5-28",
+          "latitude": 23.2376461,
+          "link": "https://www.google.com/maps/place/23.2376461,77.4083786",
+          "longitude": 77.4083786,
+          "route": "SR5",
+          "station": "Birla Mandir"
+        },
+        {
+          "id": "SR5-29",
+          "latitude": 23.23908615,
+          "link": "https://www.google.com/maps/place/23.23908615,77.4129715",
+          "longitude": 77.4129715,
+          "route": "SR5",
+          "station": "New Vidhan Sabha"
+        },
+        {
+          "id": "SR5-30",
+          "latitude": 23.23661804,
+          "link": "https://www.google.com/maps/place/23.23661804,77.41780853",
+          "longitude": 77.41780853,
+          "route": "SR5",
+          "station": "Vallabh Bhavan"
+        },
+        {
+          "id": "SR5-31",
+          "latitude": 23.23664093,
+          "link": "https://www.google.com/maps/place/23.23664093,77.42002869",
+          "longitude": 77.42002869,
+          "route": "SR5",
+          "station": "New Court"
+        },
+        {
+          "id": "SR5-32",
+          "latitude": 23.23502922,
+          "link": "https://www.google.com/maps/place/23.23502922,77.42811584",
+          "longitude": 77.42811584,
+          "route": "SR5",
+          "station": "Naramda Bhavan"
+        },
+        {
+          "id": "SR5-33",
+          "latitude": 23.23370171,
+          "link": "https://www.google.com/maps/place/23.23370171,77.43018341",
+          "longitude": 77.43018341,
+          "route": "SR5",
+          "station": "D.B.Mall"
+        },
+        {
+          "id": "SR5-34",
+          "latitude": 23.23130417,
+          "link": "https://www.google.com/maps/place/23.23130417,77.43261719",
+          "longitude": 77.43261719,
+          "route": "SR5",
+          "station": "Board Office(Milan)"
+        },
+        {
+          "id": "SR5-35",
+          "latitude": 23.23279381,
+          "link": "https://www.google.com/maps/place/23.23279381,77.4342804",
+          "longitude": 77.4342804,
+          "route": "SR5",
+          "station": "Jyoti Tlk. Top & Toun"
+        },
+        {
+          "id": "SR5-36",
+          "latitude": 23.23077965,
+          "link": "https://www.google.com/maps/place/23.23077965,77.44007874",
+          "longitude": 77.44007874,
+          "route": "SR5",
+          "station": "Kasturba Nagar"
+        },
+        {
+          "id": "SR5-37",
+          "latitude": 23.22909546,
+          "link": "https://www.google.com/maps/place/23.22909546,77.44200134",
+          "longitude": 77.44200134,
+          "route": "SR5",
+          "station": "Isbt"
+        },
+        {
+          "id": "SR5-38",
+          "latitude": 23.22394371,
+          "link": "https://www.google.com/maps/place/23.22394371,77.44197083",
+          "longitude": 77.44197083,
+          "route": "SR5",
+          "station": "Duth Deri"
+        },
+        {
+          "id": "SR5-39",
+          "latitude": 23.2238903,
+          "link": "https://www.google.com/maps/place/23.2238903,77.44543457",
+          "longitude": 77.44543457,
+          "route": "SR5",
+          "station": "Kasturba Hospital"
+        },
+        {
+          "id": "SR5-40",
+          "latitude": 23.2317276,
+          "link": "https://www.google.com/maps/place/23.2317276,77.44631958",
+          "longitude": 77.44631958,
+          "route": "SR5",
+          "station": "Anna Nagar"
+        },
+        {
+          "id": "SR5-41",
+          "latitude": 23.23168945,
+          "link": "https://www.google.com/maps/place/23.23168945,77.45013428",
+          "longitude": 77.45013428,
+          "route": "SR5",
+          "station": "Carrier College"
+        },
+        {
+          "id": "SR5-42",
+          "latitude": 23.23186493,
+          "link": "https://www.google.com/maps/place/23.23186493,77.45454407",
+          "longitude": 77.45454407,
+          "route": "SR5",
+          "station": "Govindpura Thana"
+        },
+        {
+          "id": "SR5-43",
+          "latitude": 23.23167801,
+          "link": "https://www.google.com/maps/place/23.23167801,77.45968628",
+          "longitude": 77.45968628,
+          "route": "SR5",
+          "station": "Bhel Gate \u2013 6"
+        },
+        {
+          "id": "SR5-44",
+          "latitude": 23.228899,
+          "link": "https://www.google.com/maps/place/23.228899,77.46619415",
+          "longitude": 77.46619415,
+          "route": "SR5",
+          "station": "Vijay Market"
+        },
+        {
+          "id": "SR5-45",
+          "latitude": 23.2319088,
+          "link": "https://www.google.com/maps/place/23.2319088,77.47199249",
+          "longitude": 77.47199249,
+          "route": "SR5",
+          "station": "Mahatma Gandhi Chouraha"
+        },
+        {
+          "id": "SR5-46",
+          "latitude": 23.23133659,
+          "link": "https://www.google.com/maps/place/23.23133659,77.47647095",
+          "longitude": 77.47647095,
+          "route": "SR5",
+          "station": "Ayappa Mandir"
+        },
+        {
+          "id": "SR5-47",
+          "latitude": 23.2303772,
+          "link": "https://www.google.com/maps/place/23.2303772,77.48091125",
+          "longitude": 77.48091125,
+          "route": "SR5",
+          "station": "Saint Xavier School"
+        },
+        {
+          "id": "SR5-48",
+          "latitude": 23.23015022,
+          "link": "https://www.google.com/maps/place/23.23015022,77.48556519",
+          "longitude": 77.48556519,
+          "route": "SR5",
+          "station": "Avadhpuri"
+        },
+        {
+          "id": "SR5-49",
+          "latitude": 23.22933197,
+          "link": "https://www.google.com/maps/place/23.22933197,77.49030304",
+          "longitude": 77.49030304,
+          "route": "SR5",
+          "station": "Shiv Mandir"
+        },
+        {
+          "id": "SR5-50",
+          "latitude": 23.22767639,
+          "link": "https://www.google.com/maps/place/23.22767639,77.49562836",
+          "longitude": 77.49562836,
+          "route": "SR5",
+          "station": "Avadhpuri Vidyasagar College"
+        },
+        {
+          "id": "SR6-1",
+          "latitude": 23.18857765,
+          "link": "https://www.google.com/maps/place/23.18857765,77.43373108",
+          "longitude": 77.43373108,
+          "route": "SR6",
+          "station": "Rajeev Gandhi College"
+        },
+        {
+          "id": "SR6-2",
+          "latitude": 23.18884468,
+          "link": "https://www.google.com/maps/place/23.18884468,77.43621063",
+          "longitude": 77.43621063,
+          "route": "SR6",
+          "station": "Gulmohar"
+        },
+        {
+          "id": "SR6-3",
+          "latitude": 23.19367027,
+          "link": "https://www.google.com/maps/place/23.19367027,77.43278503",
+          "longitude": 77.43278503,
+          "route": "SR6",
+          "station": "Trilanga"
+        },
+        {
+          "id": "SR6-4",
+          "latitude": 23.1993103,
+          "link": "https://www.google.com/maps/place/23.1993103,77.43023682",
+          "longitude": 77.43023682,
+          "route": "SR6",
+          "station": "Saitansingh Market"
+        },
+        {
+          "id": "SR6-5",
+          "latitude": 23.20632362,
+          "link": "https://www.google.com/maps/place/23.20632362,77.43114471",
+          "longitude": 77.43114471,
+          "route": "SR6",
+          "station": "Campion School"
+        },
+        {
+          "id": "SR6-6",
+          "latitude": 23.21149635,
+          "link": "https://www.google.com/maps/place/23.21149635,77.43119812",
+          "longitude": 77.43119812,
+          "route": "SR6",
+          "station": "Vitthal Market/1100 Q.Chu."
+        },
+        {
+          "id": "SR6-7",
+          "latitude": 23.21415901,
+          "link": "https://www.google.com/maps/place/23.21415901,77.43048859",
+          "longitude": 77.43048859,
+          "route": "SR6",
+          "station": "Baghira Apartment"
+        },
+        {
+          "id": "SR6-8",
+          "latitude": 23.21846581,
+          "link": "https://www.google.com/maps/place/23.21846581,77.42897797",
+          "longitude": 77.42897797,
+          "route": "SR6",
+          "station": "Habibganj Thana"
+        },
+        {
+          "id": "SR6-9",
+          "latitude": 23.22214699,
+          "link": "https://www.google.com/maps/place/23.22214699,77.43122864",
+          "longitude": 77.43122864,
+          "route": "SR6",
+          "station": "Bittan Mkt/Dhsera Maidan"
+        },
+        {
+          "id": "SR6-10",
+          "latitude": 23.22320938,
+          "link": "https://www.google.com/maps/place/23.22320938,77.42995453",
+          "longitude": 77.42995453,
+          "route": "SR6",
+          "station": "Subhash School"
+        },
+        {
+          "id": "SR6-11",
+          "latitude": 23.22400856,
+          "link": "https://www.google.com/maps/place/23.22400856,77.42840576",
+          "longitude": 77.42840576,
+          "route": "SR6",
+          "station": "Nutan College"
+        },
+        {
+          "id": "SR6-12",
+          "latitude": 23.22588158,
+          "link": "https://www.google.com/maps/place/23.22588158,77.42282867",
+          "longitude": 77.42282867,
+          "route": "SR6",
+          "station": "5 No.Stop"
+        },
+        {
+          "id": "SR6-13",
+          "latitude": 23.2259903,
+          "link": "https://www.google.com/maps/place/23.2259903,77.41833496",
+          "longitude": 77.41833496,
+          "route": "SR6",
+          "station": "1250/ Pranami Mandir"
+        },
+        {
+          "id": "SR6-14",
+          "latitude": 23.22496796,
+          "link": "https://www.google.com/maps/place/23.22496796,77.412323",
+          "longitude": 77.412323,
+          "route": "SR6",
+          "station": "Narmada Bhawan"
+        },
+        {
+          "id": "SR6-15",
+          "latitude": 23.22532845,
+          "link": "https://www.google.com/maps/place/23.22532845,77.40740204",
+          "longitude": 77.40740204,
+          "route": "SR6",
+          "station": "Jain Mandir"
+        },
+        {
+          "id": "SR6-16",
+          "latitude": 23.22461319,
+          "link": "https://www.google.com/maps/place/23.22461319,77.40226746",
+          "longitude": 77.40226746,
+          "route": "SR6",
+          "station": "Mata Mandir"
+        },
+        {
+          "id": "SR6-17",
+          "latitude": 23.23191643,
+          "link": "https://www.google.com/maps/place/23.23191643,77.40145874",
+          "longitude": 77.40145874,
+          "route": "SR6",
+          "station": "Teen Shed"
+        },
+        {
+          "id": "SR6-18",
+          "latitude": 23.2356739,
+          "link": "https://www.google.com/maps/place/23.2356739,77.39878845",
+          "longitude": 77.39878845,
+          "route": "SR6",
+          "station": "Rangmahal (Gtb Complex)"
+        },
+        {
+          "id": "SR6-19",
+          "latitude": 23.23756409,
+          "link": "https://www.google.com/maps/place/23.23756409,77.40115356",
+          "longitude": 77.40115356,
+          "route": "SR6",
+          "station": "Roshanpura"
+        },
+        {
+          "id": "SR6-20",
+          "latitude": 23.24048996,
+          "link": "https://www.google.com/maps/place/23.24048996,77.40636444",
+          "longitude": 77.40636444,
+          "route": "SR6",
+          "station": "Airtel Office (Malviya Nagar)"
+        },
+        {
+          "id": "SR6-21",
+          "latitude": 23.2376461,
+          "link": "https://www.google.com/maps/place/23.2376461,77.4083786",
+          "longitude": 77.4083786,
+          "route": "SR6",
+          "station": "Birla Mandir"
+        },
+        {
+          "id": "SR6-22",
+          "latitude": 23.23908615,
+          "link": "https://www.google.com/maps/place/23.23908615,77.4129715",
+          "longitude": 77.4129715,
+          "route": "SR6",
+          "station": "New Vidhan Sabha"
+        },
+        {
+          "id": "SR6-23",
+          "latitude": 23.23502922,
+          "link": "https://www.google.com/maps/place/23.23502922,77.42811584",
+          "longitude": 77.42811584,
+          "route": "SR6",
+          "station": "Naramda Bhavan"
+        },
+        {
+          "id": "SR6-24",
+          "latitude": 23.23370171,
+          "link": "https://www.google.com/maps/place/23.23370171,77.43018341",
+          "longitude": 77.43018341,
+          "route": "SR6",
+          "station": "D.B.Mall"
+        },
+        {
+          "id": "SR6-25",
+          "latitude": 23.23130417,
+          "link": "https://www.google.com/maps/place/23.23130417,77.43261719",
+          "longitude": 77.43261719,
+          "route": "SR6",
+          "station": "Board Office(Milan)"
+        },
+        {
+          "id": "SR6-26",
+          "latitude": 23.2332058,
+          "link": "https://www.google.com/maps/place/23.2332058,77.43466187",
+          "longitude": 77.43466187,
+          "route": "SR6",
+          "station": "Jyoti Talkies"
+        },
+        {
+          "id": "SR6-27",
+          "latitude": 23.23077965,
+          "link": "https://www.google.com/maps/place/23.23077965,77.44007874",
+          "longitude": 77.44007874,
+          "route": "SR6",
+          "station": "Kasturba Nagar"
+        },
+        {
+          "id": "SR6-28",
+          "latitude": 23.22909546,
+          "link": "https://www.google.com/maps/place/23.22909546,77.44200134",
+          "longitude": 77.44200134,
+          "route": "SR6",
+          "station": "Isbt"
+        },
+        {
+          "id": "SR6-29",
+          "latitude": 23.2317276,
+          "link": "https://www.google.com/maps/place/23.2317276,77.44631958",
+          "longitude": 77.44631958,
+          "route": "SR6",
+          "station": "Anna Nagar"
+        },
+        {
+          "id": "SR6-30",
+          "latitude": 23.23168945,
+          "link": "https://www.google.com/maps/place/23.23168945,77.45013428",
+          "longitude": 77.45013428,
+          "route": "SR6",
+          "station": "Carrier College"
+        },
+        {
+          "id": "SR6-31",
+          "latitude": 23.23186493,
+          "link": "https://www.google.com/maps/place/23.23186493,77.45454407",
+          "longitude": 77.45454407,
+          "route": "SR6",
+          "station": "Govindpura Thana"
+        },
+        {
+          "id": "SR6-32",
+          "latitude": 23.23167801,
+          "link": "https://www.google.com/maps/place/23.23167801,77.45968628",
+          "longitude": 77.45968628,
+          "route": "SR6",
+          "station": "Bhel Gate \u2013 6"
+        },
+        {
+          "id": "SR6-33",
+          "latitude": 23.228899,
+          "link": "https://www.google.com/maps/place/23.228899,77.46619415",
+          "longitude": 77.46619415,
+          "route": "SR6",
+          "station": "Vijay Market"
+        },
+        {
+          "id": "SR6-34",
+          "latitude": 23.2319088,
+          "link": "https://www.google.com/maps/place/23.2319088,77.47199249",
+          "longitude": 77.47199249,
+          "route": "SR6",
+          "station": "Mahatma Gandhi Chouraha"
+        },
+        {
+          "id": "SR6-35",
+          "latitude": 23.23929024,
+          "link": "https://www.google.com/maps/place/23.23929024,77.47237396",
+          "longitude": 77.47237396,
+          "route": "SR6",
+          "station": "Gandhi Market Piplani"
+        },
+        {
+          "id": "SR6-36",
+          "latitude": 23.16534042,
+          "link": "https://www.google.com/maps/place/23.16534042,77.46666718",
+          "longitude": 77.46666718,
+          "route": "SR6",
+          "station": "Allahabad Bank"
+        },
+        {
+          "id": "SR6-37",
+          "latitude": 23.24910355,
+          "link": "https://www.google.com/maps/place/23.24910355,77.4718399",
+          "longitude": 77.4718399,
+          "route": "SR6",
+          "station": "Piplani Pump"
+        },
+        {
+          "id": "SR6-38",
+          "latitude": 23.24972725,
+          "link": "https://www.google.com/maps/place/23.24972725,77.47714996",
+          "longitude": 77.47714996,
+          "route": "SR6",
+          "station": "Kalpana Nagar"
+        },
+        {
+          "id": "SR6-39",
+          "latitude": 23.25095749,
+          "link": "https://www.google.com/maps/place/23.25095749,77.47999573",
+          "longitude": 77.47999573,
+          "route": "SR6",
+          "station": "Ratnagiri By Pass"
+        },
+        {
+          "id": "SR6-40",
+          "latitude": 23.25105858,
+          "link": "https://www.google.com/maps/place/23.25105858,77.48690033",
+          "longitude": 77.48690033,
+          "route": "SR6",
+          "station": "Anand Nagar"
+        },
+        {
+          "id": "SR6-41",
+          "latitude": 23.25072861,
+          "link": "https://www.google.com/maps/place/23.25072861,77.48711395",
+          "longitude": 77.48711395,
+          "route": "SR6",
+          "station": "Ram Mandir"
+        },
+        {
+          "id": "SR6-42",
+          "latitude": 23.25024796,
+          "link": "https://www.google.com/maps/place/23.25024796,77.49098969",
+          "longitude": 77.49098969,
+          "route": "SR6",
+          "station": "Siddhartha Lake City"
+        },
+        {
+          "id": "SR6-43",
+          "latitude": 23.25769806,
+          "link": "https://www.google.com/maps/place/23.25769806,77.5017395",
+          "longitude": 77.5017395,
+          "route": "SR6",
+          "station": "Patel Nagar"
+        },
+        {
+          "id": "SR6-44",
+          "latitude": 23.24802208,
+          "link": "https://www.google.com/maps/place/23.24802208,77.50424957",
+          "longitude": 77.50424957,
+          "route": "SR6",
+          "station": "Oriantal College"
+        },
+        {
+          "id": "SR7-1",
+          "latitude": 23.30191612,
+          "link": "https://www.google.com/maps/place/23.30191612,77.36115265",
+          "longitude": 77.36115265,
+          "route": "SR7",
+          "station": "Gandhinagar"
+        },
+        {
+          "id": "SR7-2",
+          "latitude": 23.29899025,
+          "link": "https://www.google.com/maps/place/23.29899025,77.35668182",
+          "longitude": 77.35668182,
+          "route": "SR7",
+          "station": "New Gandhinagar"
+        },
+        {
+          "id": "SR7-3",
+          "latitude": 23.2972641,
+          "link": "https://www.google.com/maps/place/23.2972641,77.3533783",
+          "longitude": 77.3533783,
+          "route": "SR7",
+          "station": "Asharam Tiraha"
+        },
+        {
+          "id": "SR7-4",
+          "latitude": 23.2832222,
+          "link": "https://www.google.com/maps/place/23.2832222,77.35613251",
+          "longitude": 77.35613251,
+          "route": "SR7",
+          "station": "Data Colony"
+        },
+        {
+          "id": "SR7-5",
+          "latitude": 23.27801132,
+          "link": "https://www.google.com/maps/place/23.27801132,77.35861969",
+          "longitude": 77.35861969,
+          "route": "SR7",
+          "station": "Panchwati"
+        },
+        {
+          "id": "SR7-6",
+          "latitude": 23.27812576,
+          "link": "https://www.google.com/maps/place/23.27812576,77.37360382",
+          "longitude": 77.37360382,
+          "route": "SR7",
+          "station": "Gufa Mandir"
+        },
+        {
+          "id": "SR7-7",
+          "latitude": 23.27121925,
+          "link": "https://www.google.com/maps/place/23.27121925,77.37582397",
+          "longitude": 77.37582397,
+          "route": "SR7",
+          "station": "Vip Guest House"
+        },
+        {
+          "id": "SR7-8",
+          "latitude": 23.26949501,
+          "link": "https://www.google.com/maps/place/23.26949501,77.37691498",
+          "longitude": 77.37691498,
+          "route": "SR7",
+          "station": "Kohefiza"
+        },
+        {
+          "id": "SR7-9",
+          "latitude": 23.26358795,
+          "link": "https://www.google.com/maps/place/23.26358795,77.38312531",
+          "longitude": 77.38312531,
+          "route": "SR7",
+          "station": "Collectorate"
+        },
+        {
+          "id": "SR7-10",
+          "latitude": 23.26185036,
+          "link": "https://www.google.com/maps/place/23.26185036,77.38881683",
+          "longitude": 77.38881683,
+          "route": "SR7",
+          "station": "State Bank"
+        },
+        {
+          "id": "SR7-11",
+          "latitude": 23.26150322,
+          "link": "https://www.google.com/maps/place/23.26150322,77.39205933",
+          "longitude": 77.39205933,
+          "route": "SR7",
+          "station": "Royal Market"
+        },
+        {
+          "id": "SR7-12",
+          "latitude": 23.26281738,
+          "link": "https://www.google.com/maps/place/23.26281738,77.3937912",
+          "longitude": 77.3937912,
+          "route": "SR7",
+          "station": "Tajul Masajid"
+        },
+        {
+          "id": "SR7-13",
+          "latitude": 23.26697159,
+          "link": "https://www.google.com/maps/place/23.26697159,77.39337158",
+          "longitude": 77.39337158,
+          "route": "SR7",
+          "station": "Taj Mahal"
+        },
+        {
+          "id": "SR7-14",
+          "latitude": 23.26636505,
+          "link": "https://www.google.com/maps/place/23.26636505,77.40058899",
+          "longitude": 77.40058899,
+          "route": "SR7",
+          "station": "Bhopal Talkis"
+        },
+        {
+          "id": "SR7-15",
+          "latitude": 23.26520348,
+          "link": "https://www.google.com/maps/place/23.26520348,77.40529633",
+          "longitude": 77.40529633,
+          "route": "SR7",
+          "station": "Bus Stand"
+        },
+        {
+          "id": "SR7-16",
+          "latitude": 23.26421928,
+          "link": "https://www.google.com/maps/place/23.26421928,77.41114807",
+          "longitude": 77.41114807,
+          "route": "SR7",
+          "station": "Railway Station"
+        },
+        {
+          "id": "SR7-17",
+          "latitude": 23.26421547,
+          "link": "https://www.google.com/maps/place/23.26421547,77.40407562",
+          "longitude": 77.40407562,
+          "route": "SR7",
+          "station": "Hanuman Ganj Thana"
+        },
+        {
+          "id": "SR7-18",
+          "latitude": 23.25993347,
+          "link": "https://www.google.com/maps/place/23.25993347,77.41261292",
+          "longitude": 77.41261292,
+          "route": "SR7",
+          "station": "Milan Shadi Hall"
+        },
+        {
+          "id": "SR7-19",
+          "latitude": 23.2847538,
+          "link": "https://www.google.com/maps/place/23.2847538,77.41999054",
+          "longitude": 77.41999054,
+          "route": "SR7",
+          "station": "Ganesh Mandir Chola"
+        },
+        {
+          "id": "SR7-20",
+          "latitude": 23.2904644,
+          "link": "https://www.google.com/maps/place/23.2904644,77.40923309",
+          "longitude": 77.40923309,
+          "route": "SR7",
+          "station": "J.P Nagar"
+        },
+        {
+          "id": "SR7-21",
+          "latitude": 23.29141235,
+          "link": "https://www.google.com/maps/place/23.29141235,77.40353394",
+          "longitude": 77.40353394,
+          "route": "SR7",
+          "station": "Krishi Upaj Mandi"
+        },
+        {
+          "id": "SR7-22",
+          "latitude": 23.20410919,
+          "link": "https://www.google.com/maps/place/23.20410919,77.44606018",
+          "longitude": 77.44606018,
+          "route": "SR7",
+          "station": "Narayan Nagar"
+        },
+        {
+          "id": "SR7-23",
+          "latitude": 23.30333328,
+          "link": "https://www.google.com/maps/place/23.30333328,77.41904449",
+          "longitude": 77.41904449,
+          "route": "SR7",
+          "station": "Best Price"
+        },
+        {
+          "id": "SR7-24",
+          "latitude": 23.30174637,
+          "link": "https://www.google.com/maps/place/23.30174637,77.42449951",
+          "longitude": 77.42449951,
+          "route": "SR7",
+          "station": "Pupils Hosp"
+        },
+        {
+          "id": "SR7-25",
+          "latitude": 23.2998085,
+          "link": "https://www.google.com/maps/place/23.2998085,77.42926025",
+          "longitude": 77.42926025,
+          "route": "SR7",
+          "station": "Bhanpur Over Bridge"
+        },
+        {
+          "id": "SR7-26",
+          "latitude": 23.28012276,
+          "link": "https://www.google.com/maps/place/23.28012276,77.44592285",
+          "longitude": 77.44592285,
+          "route": "SR7",
+          "station": "Tirupati"
+        },
+        {
+          "id": "SR7-27",
+          "latitude": 23.28050995,
+          "link": "https://www.google.com/maps/place/23.28050995,77.44728088",
+          "longitude": 77.44728088,
+          "route": "SR7",
+          "station": "Damkheda"
+        },
+        {
+          "id": "SR7-28",
+          "latitude": 23.27963638,
+          "link": "https://www.google.com/maps/place/23.27963638,77.45096588",
+          "longitude": 77.45096588,
+          "route": "SR7",
+          "station": "Sagar College"
+        },
+        {
+          "id": "SR7-29",
+          "latitude": 23.27839088,
+          "link": "https://www.google.com/maps/place/23.27839088,77.4562149",
+          "longitude": 77.4562149,
+          "route": "SR7",
+          "station": "Minal Gate No 8"
+        },
+        {
+          "id": "SR7-30",
+          "latitude": 23.2755127,
+          "link": "https://www.google.com/maps/place/23.2755127,77.46360016",
+          "longitude": 77.46360016,
+          "route": "SR7",
+          "station": "Ayodhaya Square"
+        },
+        {
+          "id": "SR7-31",
+          "latitude": 23.27321053,
+          "link": "https://www.google.com/maps/place/23.27321053,77.46041107",
+          "longitude": 77.46041107,
+          "route": "SR7",
+          "station": "Raj Industries"
+        },
+        {
+          "id": "SR7-32",
+          "latitude": 23.26885605,
+          "link": "https://www.google.com/maps/place/23.26885605,77.45689392",
+          "longitude": 77.45689392,
+          "route": "SR7",
+          "station": "Minal Mall"
+        },
+        {
+          "id": "SR7-33",
+          "latitude": 23.25148392,
+          "link": "https://www.google.com/maps/place/23.25148392,77.45630646",
+          "longitude": 77.45630646,
+          "route": "SR7",
+          "station": "J.K Tiraha"
+        },
+        {
+          "id": "SR7-34",
+          "latitude": 23.25217438,
+          "link": "https://www.google.com/maps/place/23.25217438,77.46327972",
+          "longitude": 77.46327972,
+          "route": "SR7",
+          "station": "Nizamuddin"
+        },
+        {
+          "id": "SR7-35",
+          "latitude": 23.25581169,
+          "link": "https://www.google.com/maps/place/23.25581169,77.4601593",
+          "longitude": 77.4601593,
+          "route": "SR7",
+          "station": "Indrapuri A"
+        },
+        {
+          "id": "SR7-36",
+          "latitude": 23.25039482,
+          "link": "https://www.google.com/maps/place/23.25039482,77.46289063",
+          "longitude": 77.46289063,
+          "route": "SR7",
+          "station": "Bhel Jubilee Gate"
+        },
+        {
+          "id": "SR7-37",
+          "latitude": 23.24983215,
+          "link": "https://www.google.com/maps/place/23.24983215,77.46750641",
+          "longitude": 77.46750641,
+          "route": "SR7",
+          "station": "Bima Hospital"
+        },
+        {
+          "id": "SR7-38",
+          "latitude": 23.24910355,
+          "link": "https://www.google.com/maps/place/23.24910355,77.4718399",
+          "longitude": 77.4718399,
+          "route": "SR7",
+          "station": "Piplani Pump"
+        },
+        {
+          "id": "SR7-39",
+          "latitude": 23.24972725,
+          "link": "https://www.google.com/maps/place/23.24972725,77.47714996",
+          "longitude": 77.47714996,
+          "route": "SR7",
+          "station": "Kalpana Nagar"
+        },
+        {
+          "id": "SR7-40",
+          "latitude": 23.25102234,
+          "link": "https://www.google.com/maps/place/23.25102234,77.47975922",
+          "longitude": 77.47975922,
+          "route": "SR7",
+          "station": "Ratnagiri Bypass Tiraha"
+        },
+        {
+          "id": "SR7-41",
+          "latitude": 23.25105858,
+          "link": "https://www.google.com/maps/place/23.25105858,77.48690033",
+          "longitude": 77.48690033,
+          "route": "SR7",
+          "station": "Anand Nagar"
+        },
+        {
+          "id": "SR7-42",
+          "latitude": 23.24896049,
+          "link": "https://www.google.com/maps/place/23.24896049,77.49092865",
+          "longitude": 77.49092865,
+          "route": "SR7",
+          "station": "Siddhart Lakecity"
+        },
+        {
+          "id": "SR7-43",
+          "latitude": 23.24950218,
+          "link": "https://www.google.com/maps/place/23.24950218,77.50080872",
+          "longitude": 77.50080872,
+          "route": "SR7",
+          "station": "Oriental College"
+        },
+        {
+          "id": "SR7-44",
+          "latitude": 23.25270653,
+          "link": "https://www.google.com/maps/place/23.25270653,77.51100922",
+          "longitude": 77.51100922,
+          "route": "SR7",
+          "station": "Patel Nagar Bypass"
+        },
+        {
+          "id": "SR8-1",
+          "latitude": 23.1499958,
+          "link": "https://www.google.com/maps/place/23.1499958,77.41099548",
+          "longitude": 77.41099548,
+          "route": "SR8",
+          "station": "Chinchli Bairagarh"
+        },
+        {
+          "id": "SR8-2",
+          "latitude": 23.15826225,
+          "link": "https://www.google.com/maps/place/23.15826225,77.4135437",
+          "longitude": 77.4135437,
+          "route": "SR8",
+          "station": "Gainhu Kheda"
+        },
+        {
+          "id": "SR8-3",
+          "latitude": 23.16161156,
+          "link": "https://www.google.com/maps/place/23.16161156,77.41426849",
+          "longitude": 77.41426849,
+          "route": "SR8",
+          "station": "Nahar(Sanskar Gardan)"
+        },
+        {
+          "id": "SR8-4",
+          "latitude": 23.16539001,
+          "link": "https://www.google.com/maps/place/23.16539001,77.41527557",
+          "longitude": 77.41527557,
+          "route": "SR8",
+          "station": "Lalita Nagar"
+        },
+        {
+          "id": "SR8-5",
+          "latitude": 23.17263985,
+          "link": "https://www.google.com/maps/place/23.17263985,77.41699219",
+          "longitude": 77.41699219,
+          "route": "SR8",
+          "station": "Nayapura Colony"
+        },
+        {
+          "id": "SR8-6",
+          "latitude": 23.17947769,
+          "link": "https://www.google.com/maps/place/23.17947769,77.41843414",
+          "longitude": 77.41843414,
+          "route": "SR8",
+          "station": "Beema Kunj"
+        },
+        {
+          "id": "SR8-7",
+          "latitude": 23.18140984,
+          "link": "https://www.google.com/maps/place/23.18140984,77.40851593",
+          "longitude": 77.40851593,
+          "route": "SR8",
+          "station": "Mahabali Nagar"
+        },
+        {
+          "id": "SR8-8",
+          "latitude": 23.18905067,
+          "link": "https://www.google.com/maps/place/23.18905067,77.41722107",
+          "longitude": 77.41722107,
+          "route": "SR8",
+          "station": "Sarvadharma Colony"
+        },
+        {
+          "id": "SR8-9",
+          "latitude": 23.20380783,
+          "link": "https://www.google.com/maps/place/23.20380783,77.41159058",
+          "longitude": 77.41159058,
+          "route": "SR8",
+          "station": "Nahar Puliya"
+        },
+        {
+          "id": "SR8-10",
+          "latitude": 23.19921303,
+          "link": "https://www.google.com/maps/place/23.19921303,77.42011261",
+          "longitude": 77.42011261,
+          "route": "SR8",
+          "station": "Ayusman Hospital"
+        },
+        {
+          "id": "SR8-11",
+          "latitude": 23.20174408,
+          "link": "https://www.google.com/maps/place/23.20174408,77.42533112",
+          "longitude": 77.42533112,
+          "route": "SR8",
+          "station": "Manisa Market"
+        },
+        {
+          "id": "SR8-12",
+          "latitude": 23.20215797,
+          "link": "https://www.google.com/maps/place/23.20215797,77.43006134",
+          "longitude": 77.43006134,
+          "route": "SR8",
+          "station": "Saitan Singh"
+        },
+        {
+          "id": "SR8-13",
+          "latitude": 23.20632362,
+          "link": "https://www.google.com/maps/place/23.20632362,77.43114471",
+          "longitude": 77.43114471,
+          "route": "SR8",
+          "station": "Campion School"
+        },
+        {
+          "id": "SR8-14",
+          "latitude": 23.21154404,
+          "link": "https://www.google.com/maps/place/23.21154404,77.43113708",
+          "longitude": 77.43113708,
+          "route": "SR8",
+          "station": "Bittal Market/1100 Q.Chu."
+        },
+        {
+          "id": "SR8-15",
+          "latitude": 23.2146244,
+          "link": "https://www.google.com/maps/place/23.2146244,77.43126678",
+          "longitude": 77.43126678,
+          "route": "SR8",
+          "station": "Baas Khedi"
+        },
+        {
+          "id": "SR8-16",
+          "latitude": 23.21846581,
+          "link": "https://www.google.com/maps/place/23.21846581,77.42897797",
+          "longitude": 77.42897797,
+          "route": "SR8",
+          "station": "Habibganj Thana"
+        },
+        {
+          "id": "SR8-17",
+          "latitude": 23.22214699,
+          "link": "https://www.google.com/maps/place/23.22214699,77.43122864",
+          "longitude": 77.43122864,
+          "route": "SR8",
+          "station": "Bittan Mkt/Dhsera Maidan"
+        },
+        {
+          "id": "SR8-18",
+          "latitude": 23.22320938,
+          "link": "https://www.google.com/maps/place/23.22320938,77.42995453",
+          "longitude": 77.42995453,
+          "route": "SR8",
+          "station": "Subhash School"
+        },
+        {
+          "id": "SR8-19",
+          "latitude": 23.22294998,
+          "link": "https://www.google.com/maps/place/23.22294998,77.43397522",
+          "longitude": 77.43397522,
+          "route": "SR8",
+          "station": "7 No.Stop"
+        },
+        {
+          "id": "SR8-20",
+          "latitude": 23.2233696,
+          "link": "https://www.google.com/maps/place/23.2233696,77.43634033",
+          "longitude": 77.43634033,
+          "route": "SR8",
+          "station": "Bjp Office"
+        },
+        {
+          "id": "SR8-21",
+          "latitude": 23.22126961,
+          "link": "https://www.google.com/maps/place/23.22126961,77.44203949",
+          "longitude": 77.44203949,
+          "route": "SR8",
+          "station": "Habibganj R/Station"
+        },
+        {
+          "id": "SR8-22",
+          "latitude": 23.21614647,
+          "link": "https://www.google.com/maps/place/23.21614647,77.44187164",
+          "longitude": 77.44187164,
+          "route": "SR8",
+          "station": "Habibganj Naka"
+        },
+        {
+          "id": "SR8-23",
+          "latitude": 23.22126961,
+          "link": "https://www.google.com/maps/place/23.22126961,77.44203949",
+          "longitude": 77.44203949,
+          "route": "SR8",
+          "station": "Habibganj R/Station"
+        },
+        {
+          "id": "SR8-24",
+          "latitude": 23.22702599,
+          "link": "https://www.google.com/maps/place/23.22702599,77.43547058",
+          "longitude": 77.43547058,
+          "route": "SR8",
+          "station": "Sargam Talkies"
+        },
+        {
+          "id": "SR8-25",
+          "latitude": 23.23279381,
+          "link": "https://www.google.com/maps/place/23.23279381,77.4342804",
+          "longitude": 77.4342804,
+          "route": "SR8",
+          "station": "Jyoti Tlk. Top & Toun"
+        },
+        {
+          "id": "SR8-26",
+          "latitude": 23.22909546,
+          "link": "https://www.google.com/maps/place/23.22909546,77.44200134",
+          "longitude": 77.44200134,
+          "route": "SR8",
+          "station": "Isbt"
+        },
+        {
+          "id": "SR8-27",
+          "latitude": 23.23284149,
+          "link": "https://www.google.com/maps/place/23.23284149,77.44184113",
+          "longitude": 77.44184113,
+          "route": "SR8",
+          "station": "Kasturwa Nagar"
+        },
+        {
+          "id": "SR8-28",
+          "latitude": 23.23412514,
+          "link": "https://www.google.com/maps/place/23.23412514,77.44158173",
+          "longitude": 77.44158173,
+          "route": "SR8",
+          "station": "Goutam Nagar"
+        },
+        {
+          "id": "SR8-29",
+          "latitude": 23.23427582,
+          "link": "https://www.google.com/maps/place/23.23427582,77.44258881",
+          "longitude": 77.44258881,
+          "route": "SR8",
+          "station": "Shanti Niketan"
+        },
+        {
+          "id": "SR8-30",
+          "latitude": 23.24155045,
+          "link": "https://www.google.com/maps/place/23.24155045,77.44004822",
+          "longitude": 77.44004822,
+          "route": "SR8",
+          "station": "Janta Quatar"
+        },
+        {
+          "id": "SR8-31",
+          "latitude": 23.24440575,
+          "link": "https://www.google.com/maps/place/23.24440575,77.4357605",
+          "longitude": 77.4357605,
+          "route": "SR8",
+          "station": "Sant Pitar Charch"
+        },
+        {
+          "id": "SR8-32",
+          "latitude": 23.24682045,
+          "link": "https://www.google.com/maps/place/23.24682045,77.43184662",
+          "longitude": 77.43184662,
+          "route": "SR8",
+          "station": "Subhas Fatak"
+        },
+        {
+          "id": "SR8-33",
+          "latitude": 23.25223732,
+          "link": "https://www.google.com/maps/place/23.25223732,77.43135071",
+          "longitude": 77.43135071,
+          "route": "SR8",
+          "station": "Prabhat Petrol Pump"
+        },
+        {
+          "id": "SR8-34",
+          "latitude": 23.2556324,
+          "link": "https://www.google.com/maps/place/23.2556324,77.42990875",
+          "longitude": 77.42990875,
+          "route": "SR8",
+          "station": "Swami Vivekanand Chouraha"
+        },
+        {
+          "id": "SR8-35",
+          "latitude": 23.25686264,
+          "link": "https://www.google.com/maps/place/23.25686264,77.42788696",
+          "longitude": 77.42788696,
+          "route": "SR8",
+          "station": "New Ashoka Gardan"
+        },
+        {
+          "id": "SR8-36",
+          "latitude": 23.25845909,
+          "link": "https://www.google.com/maps/place/23.25845909,77.42745972",
+          "longitude": 77.42745972,
+          "route": "SR8",
+          "station": "Ashoka Gardan Thana"
+        },
+        {
+          "id": "SR8-37",
+          "latitude": 23.25937271,
+          "link": "https://www.google.com/maps/place/23.25937271,77.42517853",
+          "longitude": 77.42517853,
+          "route": "SR8",
+          "station": "Pushpa Nagar Chouraha"
+        },
+        {
+          "id": "SR8-38",
+          "latitude": 23.25993347,
+          "link": "https://www.google.com/maps/place/23.25993347,77.41261292",
+          "longitude": 77.41261292,
+          "route": "SR8",
+          "station": "Kammu Ka Bagh"
+        },
+        {
+          "id": "SR8-39",
+          "latitude": 23.25947762,
+          "link": "https://www.google.com/maps/place/23.25947762,77.42211914",
+          "longitude": 77.42211914,
+          "route": "SR8",
+          "station": "High Secondary S"
+        },
+        {
+          "id": "SR8-40",
+          "latitude": 23.25993347,
+          "link": "https://www.google.com/maps/place/23.25993347,77.41261292",
+          "longitude": 77.41261292,
+          "route": "SR8",
+          "station": "Railway Plat Form No 1"
+        },
+        {
+          "id": "SR8-41",
+          "latitude": 23.263834,
+          "link": "https://www.google.com/maps/place/23.263834,77.41313934",
+          "longitude": 77.41313934,
+          "route": "SR8",
+          "station": "Grp Thana"
+        },
+        {
+          "id": "SR8-42",
+          "latitude": 23.26717186,
+          "link": "https://www.google.com/maps/place/23.26717186,77.41066742",
+          "longitude": 77.41066742,
+          "route": "SR8",
+          "station": "Railway Colony"
+        },
+        {
+          "id": "SR8-43",
+          "latitude": 23.26574707,
+          "link": "https://www.google.com/maps/place/23.26574707,77.41374207",
+          "longitude": 77.41374207,
+          "route": "SR8",
+          "station": "Sai Mandir"
+        },
+        {
+          "id": "SR8-44",
+          "latitude": 23.26749039,
+          "link": "https://www.google.com/maps/place/23.26749039,77.41448212",
+          "longitude": 77.41448212,
+          "route": "SR8",
+          "station": "Dwarka Nagar"
+        },
+        {
+          "id": "SR8-45",
+          "latitude": 23.27441025,
+          "link": "https://www.google.com/maps/place/23.27441025,77.41658783",
+          "longitude": 77.41658783,
+          "route": "SR8",
+          "station": "State Bank Atm"
+        },
+        {
+          "id": "SR8-46",
+          "latitude": 23.27950478,
+          "link": "https://www.google.com/maps/place/23.27950478,77.42023468",
+          "longitude": 77.42023468,
+          "route": "SR8",
+          "station": "Indus Tiraha"
+        },
+        {
+          "id": "SR8-47",
+          "latitude": 23.28023338,
+          "link": "https://www.google.com/maps/place/23.28023338,77.42560577",
+          "longitude": 77.42560577,
+          "route": "SR8",
+          "station": "Coach Factory"
+        },
+        {
+          "id": "TR1-1",
+          "latitude": 23.2658577,
+          "link": "https://www.google.com/maps/place/23.2658577,77.3105545",
+          "longitude": 77.3105545,
+          "route": "TR1",
+          "station": "Chiraiu Hospital"
+        },
+        {
+          "id": "TR1-2",
+          "latitude": 23.29883385,
+          "link": "https://www.google.com/maps/place/23.29883385,77.34618378",
+          "longitude": 77.34618378,
+          "route": "TR1",
+          "station": "Nai Basti"
+        },
+        {
+          "id": "TR1-3",
+          "latitude": 23.32309532,
+          "link": "https://www.google.com/maps/place/23.32309532,77.36976624",
+          "longitude": 77.36976624,
+          "route": "TR1",
+          "station": "Baisha Khedi"
+        },
+        {
+          "id": "TR1-4",
+          "latitude": 23.27388763,
+          "link": "https://www.google.com/maps/place/23.27388763,77.3223877",
+          "longitude": 77.3223877,
+          "route": "TR1",
+          "station": "Bairagarh Kala"
+        },
+        {
+          "id": "TR1-5",
+          "latitude": 23.27384949,
+          "link": "https://www.google.com/maps/place/23.27384949,77.33647919",
+          "longitude": 77.33647919,
+          "route": "TR1",
+          "station": "Bairagarh R/Station"
+        },
+        {
+          "id": "TR1-6",
+          "latitude": 23.27164459,
+          "link": "https://www.google.com/maps/place/23.27164459,77.34195709",
+          "longitude": 77.34195709,
+          "route": "TR1",
+          "station": "Bairagarh Bus Stand"
+        },
+        {
+          "id": "TR1-7",
+          "latitude": 23.27326584,
+          "link": "https://www.google.com/maps/place/23.27326584,77.36399078",
+          "longitude": 77.36399078,
+          "route": "TR1",
+          "station": "Halalpur Bus Stand"
+        },
+        {
+          "id": "TR1-8",
+          "latitude": 23.27306938,
+          "link": "https://www.google.com/maps/place/23.27306938,77.36846924",
+          "longitude": 77.36846924,
+          "route": "TR1",
+          "station": "Lalghati"
+        },
+        {
+          "id": "TR1-9",
+          "latitude": 23.27131844,
+          "link": "https://www.google.com/maps/place/23.27131844,77.37574005",
+          "longitude": 77.37574005,
+          "route": "TR1",
+          "station": "Vip Guest"
+        },
+        {
+          "id": "TR1-10",
+          "latitude": 23.26911736,
+          "link": "https://www.google.com/maps/place/23.26911736,77.37727356",
+          "longitude": 77.37727356,
+          "route": "TR1",
+          "station": "Koh-E-Fiza"
+        },
+        {
+          "id": "TR1-11",
+          "latitude": 23.26358795,
+          "link": "https://www.google.com/maps/place/23.26358795,77.38312531",
+          "longitude": 77.38312531,
+          "route": "TR1",
+          "station": "Collectorate"
+        },
+        {
+          "id": "TR1-12",
+          "latitude": 23.26187897,
+          "link": "https://www.google.com/maps/place/23.26187897,77.38874054",
+          "longitude": 77.38874054,
+          "route": "TR1",
+          "station": "Sbi Chouraha"
+        },
+        {
+          "id": "TR1-13",
+          "latitude": 23.26150322,
+          "link": "https://www.google.com/maps/place/23.26150322,77.39205933",
+          "longitude": 77.39205933,
+          "route": "TR1",
+          "station": "Royal Market"
+        },
+        {
+          "id": "TR1-14",
+          "latitude": 23.2591362,
+          "link": "https://www.google.com/maps/place/23.2591362,77.39845276",
+          "longitude": 77.39845276,
+          "route": "TR1",
+          "station": "Peergate"
+        },
+        {
+          "id": "TR1-15",
+          "latitude": 23.25592232,
+          "link": "https://www.google.com/maps/place/23.25592232,77.39857483",
+          "longitude": 77.39857483,
+          "route": "TR1",
+          "station": "Moti Masjid"
+        },
+        {
+          "id": "TR1-16",
+          "latitude": 23.25196648,
+          "link": "https://www.google.com/maps/place/23.25196648,77.39789581",
+          "longitude": 77.39789581,
+          "route": "TR1",
+          "station": "Kamla Park"
+        },
+        {
+          "id": "TR1-17",
+          "latitude": 23.24457741,
+          "link": "https://www.google.com/maps/place/23.24457741,77.39684296",
+          "longitude": 77.39684296,
+          "route": "TR1",
+          "station": "Polytechnic"
+        },
+        {
+          "id": "TR1-18",
+          "latitude": 23.24265099,
+          "link": "https://www.google.com/maps/place/23.24265099,77.39748383",
+          "longitude": 77.39748383,
+          "route": "TR1",
+          "station": "Rang Mahal"
+        },
+        {
+          "id": "TR1-19",
+          "latitude": 23.23756409,
+          "link": "https://www.google.com/maps/place/23.23756409,77.40115356",
+          "longitude": 77.40115356,
+          "route": "TR1",
+          "station": "Roshanpura"
+        },
+        {
+          "id": "TR1-20",
+          "latitude": 23.23516846,
+          "link": "https://www.google.com/maps/place/23.23516846,77.40137482",
+          "longitude": 77.40137482,
+          "route": "TR1",
+          "station": "New Market, Top&Town"
+        },
+        {
+          "id": "TR1-21",
+          "latitude": 23.23270798,
+          "link": "https://www.google.com/maps/place/23.23270798,77.41160583",
+          "longitude": 77.41160583,
+          "route": "TR1",
+          "station": "Prakash Tarun Pushkar"
+        },
+        {
+          "id": "TR1-22",
+          "latitude": 23.23146248,
+          "link": "https://www.google.com/maps/place/23.23146248,77.41585541",
+          "longitude": 77.41585541,
+          "route": "TR1",
+          "station": "1250 Hospital"
+        },
+        {
+          "id": "TR1-23",
+          "latitude": 23.23126602,
+          "link": "https://www.google.com/maps/place/23.23126602,77.42153931",
+          "longitude": 77.42153931,
+          "route": "TR1",
+          "station": "Congress Bhawan"
+        },
+        {
+          "id": "TR1-24",
+          "latitude": 23.23079109,
+          "link": "https://www.google.com/maps/place/23.23079109,77.42773438",
+          "longitude": 77.42773438,
+          "route": "TR1",
+          "station": "Vyapam"
+        },
+        {
+          "id": "TR1-25",
+          "latitude": 23.23017502,
+          "link": "https://www.google.com/maps/place/23.23017502,77.43279266",
+          "longitude": 77.43279266,
+          "route": "TR1",
+          "station": "Board Office (Zone-2)"
+        },
+        {
+          "id": "TR1-26",
+          "latitude": 23.22702599,
+          "link": "https://www.google.com/maps/place/23.22702599,77.43547058",
+          "longitude": 77.43547058,
+          "route": "TR1",
+          "station": "Sargam Talkies"
+        },
+        {
+          "id": "TR1-27",
+          "latitude": 23.22126961,
+          "link": "https://www.google.com/maps/place/23.22126961,77.44203949",
+          "longitude": 77.44203949,
+          "route": "TR1",
+          "station": "Habibganj R/Station"
+        },
+        {
+          "id": "TR1-28",
+          "latitude": 23.21614647,
+          "link": "https://www.google.com/maps/place/23.21614647,77.44187164",
+          "longitude": 77.44187164,
+          "route": "TR1",
+          "station": "Habibganj Naka"
+        },
+        {
+          "id": "TR1-29",
+          "latitude": 23.22126961,
+          "link": "https://www.google.com/maps/place/23.22126961,77.44203949",
+          "longitude": 77.44203949,
+          "route": "TR1",
+          "station": "Habibganj R/Station"
+        },
+        {
+          "id": "TR1-30",
+          "latitude": 23.2233696,
+          "link": "https://www.google.com/maps/place/23.2233696,77.43634033",
+          "longitude": 77.43634033,
+          "route": "TR1",
+          "station": "Bjp Office"
+        },
+        {
+          "id": "TR1-31",
+          "latitude": 23.22806168,
+          "link": "https://www.google.com/maps/place/23.22806168,77.43450928",
+          "longitude": 77.43450928,
+          "route": "TR1",
+          "station": "7 No. Stop"
+        },
+        {
+          "id": "TR1-32",
+          "latitude": 23.22320938,
+          "link": "https://www.google.com/maps/place/23.22320938,77.42995453",
+          "longitude": 77.42995453,
+          "route": "TR1",
+          "station": "Subhash School"
+        },
+        {
+          "id": "TR1-33",
+          "latitude": 23.22214699,
+          "link": "https://www.google.com/maps/place/23.22214699,77.43122864",
+          "longitude": 77.43122864,
+          "route": "TR1",
+          "station": "Bittan Mkt/Dhsera Maidan"
+        },
+        {
+          "id": "TR1-34",
+          "latitude": 23.21846581,
+          "link": "https://www.google.com/maps/place/23.21846581,77.42897797",
+          "longitude": 77.42897797,
+          "route": "TR1",
+          "station": "Habibganj Thana"
+        },
+        {
+          "id": "TR1-35",
+          "latitude": 23.2146244,
+          "link": "https://www.google.com/maps/place/23.2146244,77.43126678",
+          "longitude": 77.43126678,
+          "route": "TR1",
+          "station": "Baas Khedi"
+        },
+        {
+          "id": "TR1-36",
+          "latitude": 23.21149635,
+          "link": "https://www.google.com/maps/place/23.21149635,77.43119812",
+          "longitude": 77.43119812,
+          "route": "TR1",
+          "station": "Vitthal Market/1100 Q.Chu."
+        },
+        {
+          "id": "TR1-37",
+          "latitude": 23.21000099,
+          "link": "https://www.google.com/maps/place/23.21000099,77.43650818",
+          "longitude": 77.43650818,
+          "route": "TR1",
+          "station": "11 No. Stop"
+        },
+        {
+          "id": "TR1-38",
+          "latitude": 23.20692825,
+          "link": "https://www.google.com/maps/place/23.20692825,77.43692017",
+          "longitude": 77.43692017,
+          "route": "TR1",
+          "station": "Sai Board"
+        },
+        {
+          "id": "TR1-39",
+          "latitude": 23.20287895,
+          "link": "https://www.google.com/maps/place/23.20287895,77.4373703",
+          "longitude": 77.4373703,
+          "route": "TR1",
+          "station": "12 No. Stop"
+        },
+        {
+          "id": "TR1-40",
+          "latitude": 23.19338036,
+          "link": "https://www.google.com/maps/place/23.19338036,77.44060516",
+          "longitude": 77.44060516,
+          "route": "TR1",
+          "station": "Ishwar Nagar"
+        },
+        {
+          "id": "TR1-41",
+          "latitude": 23.19261169,
+          "link": "https://www.google.com/maps/place/23.19261169,77.4356308",
+          "longitude": 77.4356308,
+          "route": "TR1",
+          "station": "Savoi Complex"
+        },
+        {
+          "id": "TR1-42",
+          "latitude": 23.18682671,
+          "link": "https://www.google.com/maps/place/23.18682671,77.4367218",
+          "longitude": 77.4367218,
+          "route": "TR1",
+          "station": "Nehar"
+        },
+        {
+          "id": "TR1-43",
+          "latitude": 23.18460274,
+          "link": "https://www.google.com/maps/place/23.18460274,77.43774414",
+          "longitude": 77.43774414,
+          "route": "TR1",
+          "station": "Tilak Nagar"
+        },
+        {
+          "id": "TR1-44",
+          "latitude": 23.17773247,
+          "link": "https://www.google.com/maps/place/23.17773247,77.43774414",
+          "longitude": 77.43774414,
+          "route": "TR1",
+          "station": "Indus Garden"
+        },
+        {
+          "id": "TR1-45",
+          "latitude": 23.17072868,
+          "link": "https://www.google.com/maps/place/23.17072868,77.44285583",
+          "longitude": 77.44285583,
+          "route": "TR1",
+          "station": "Rohit Nagar Ph-Ii"
+        },
+        {
+          "id": "TR1-46",
+          "latitude": 23.16909599,
+          "link": "https://www.google.com/maps/place/23.16909599,77.44210815",
+          "longitude": 77.44210815,
+          "route": "TR1",
+          "station": "Aakriti Eco City"
+        },
+        {
+          "id": "TR2-1",
+          "latitude": 23.2652874,
+          "link": "https://www.google.com/maps/place/23.2652874,77.40531921",
+          "longitude": 77.40531921,
+          "route": "TR2",
+          "station": "Nadra Bus Stand"
+        },
+        {
+          "id": "TR2-2",
+          "latitude": 23.26443863,
+          "link": "https://www.google.com/maps/place/23.26443863,77.40631866",
+          "longitude": 77.40631866,
+          "route": "TR2",
+          "station": "Sabji Mandi"
+        },
+        {
+          "id": "TR2-3",
+          "latitude": 23.26436806,
+          "link": "https://www.google.com/maps/place/23.26436806,77.41020203",
+          "longitude": 77.41020203,
+          "route": "TR2",
+          "station": "Alpana Tiraha"
+        },
+        {
+          "id": "TR2-4",
+          "latitude": 23.26047707,
+          "link": "https://www.google.com/maps/place/23.26047707,77.41085815",
+          "longitude": 77.41085815,
+          "route": "TR2",
+          "station": "Bharat Talkies"
+        },
+        {
+          "id": "TR2-5",
+          "latitude": 23.25906372,
+          "link": "https://www.google.com/maps/place/23.25906372,77.41123962",
+          "longitude": 77.41123962,
+          "route": "TR2",
+          "station": "Bharat Talkies 2"
+        },
+        {
+          "id": "TR2-6",
+          "latitude": 23.25801277,
+          "link": "https://www.google.com/maps/place/23.25801277,77.41442108",
+          "longitude": 77.41442108,
+          "route": "TR2",
+          "station": "Patra Pul"
+        },
+        {
+          "id": "TR2-7",
+          "latitude": 23.25583267,
+          "link": "https://www.google.com/maps/place/23.25583267,77.41832733",
+          "longitude": 77.41832733,
+          "route": "TR2",
+          "station": "Barkhedi Rc"
+        },
+        {
+          "id": "TR2-8",
+          "latitude": 23.25497627,
+          "link": "https://www.google.com/maps/place/23.25497627,77.41954803",
+          "longitude": 77.41954803,
+          "route": "TR2",
+          "station": "Upaj Mandi"
+        },
+        {
+          "id": "TR2-9",
+          "latitude": 23.2527523,
+          "link": "https://www.google.com/maps/place/23.2527523,77.42272949",
+          "longitude": 77.42272949,
+          "route": "TR2",
+          "station": "Bogda Pul"
+        },
+        {
+          "id": "TR2-10",
+          "latitude": 23.250103,
+          "link": "https://www.google.com/maps/place/23.250103,77.42388916",
+          "longitude": 77.42388916,
+          "route": "TR2",
+          "station": "Jinsi Tiraha"
+        },
+        {
+          "id": "TR2-11",
+          "latitude": 23.24654961,
+          "link": "https://www.google.com/maps/place/23.24654961,77.43169403",
+          "longitude": 77.43169403,
+          "route": "TR2",
+          "station": "Subhash R/Fatak"
+        },
+        {
+          "id": "TR2-12",
+          "latitude": 23.24397087,
+          "link": "https://www.google.com/maps/place/23.24397087,77.43269348",
+          "longitude": 77.43269348,
+          "route": "TR2",
+          "station": "Sbi Lho"
+        },
+        {
+          "id": "TR2-13",
+          "latitude": 23.23867226,
+          "link": "https://www.google.com/maps/place/23.23867226,77.43112183",
+          "longitude": 77.43112183,
+          "route": "TR2",
+          "station": "Post Office"
+        },
+        {
+          "id": "TR2-14",
+          "latitude": 23.23369026,
+          "link": "https://www.google.com/maps/place/23.23369026,77.43019104",
+          "longitude": 77.43019104,
+          "route": "TR2",
+          "station": "D B Mall"
+        },
+        {
+          "id": "TR2-15",
+          "latitude": 23.23129463,
+          "link": "https://www.google.com/maps/place/23.23129463,77.43256378",
+          "longitude": 77.43256378,
+          "route": "TR2",
+          "station": "Board Office (Milan)"
+        },
+        {
+          "id": "TR2-16",
+          "latitude": 23.23279381,
+          "link": "https://www.google.com/maps/place/23.23279381,77.4342804",
+          "longitude": 77.4342804,
+          "route": "TR2",
+          "station": "Jyoti Tlk. Top & Toun"
+        },
+        {
+          "id": "TR2-17",
+          "latitude": 23.23284149,
+          "link": "https://www.google.com/maps/place/23.23284149,77.44184113",
+          "longitude": 77.44184113,
+          "route": "TR2",
+          "station": "Kasturwa Nagar"
+        },
+        {
+          "id": "TR2-18",
+          "latitude": 23.22909546,
+          "link": "https://www.google.com/maps/place/23.22909546,77.44200134",
+          "longitude": 77.44200134,
+          "route": "TR2",
+          "station": "Isbt"
+        },
+        {
+          "id": "TR2-19",
+          "latitude": 23.22451401,
+          "link": "https://www.google.com/maps/place/23.22451401,77.44213104",
+          "longitude": 77.44213104,
+          "route": "TR2",
+          "station": "Dudh Deri"
+        },
+        {
+          "id": "TR2-20",
+          "latitude": 23.22126961,
+          "link": "https://www.google.com/maps/place/23.22126961,77.44203949",
+          "longitude": 77.44203949,
+          "route": "TR2",
+          "station": "Habibganj R/Station"
+        },
+        {
+          "id": "TR2-21",
+          "latitude": 23.21614647,
+          "link": "https://www.google.com/maps/place/23.21614647,77.44187164",
+          "longitude": 77.44187164,
+          "route": "TR2",
+          "station": "Habibganj Naka"
+        },
+        {
+          "id": "TR2-22",
+          "latitude": 23.21052742,
+          "link": "https://www.google.com/maps/place/23.21052742,77.44392395",
+          "longitude": 77.44392395,
+          "route": "TR2",
+          "station": "Rrl"
+        },
+        {
+          "id": "TR2-23",
+          "latitude": 23.20410919,
+          "link": "https://www.google.com/maps/place/23.20410919,77.44606018",
+          "longitude": 77.44606018,
+          "route": "TR2",
+          "station": "Narayan Nagar"
+        },
+        {
+          "id": "TR2-24",
+          "latitude": 23.1991787,
+          "link": "https://www.google.com/maps/place/23.1991787,77.44781494",
+          "longitude": 77.44781494,
+          "route": "TR2",
+          "station": "University"
+        },
+        {
+          "id": "TR2-25",
+          "latitude": 23.19544601,
+          "link": "https://www.google.com/maps/place/23.19544601,77.44924927",
+          "longitude": 77.44924927,
+          "route": "TR2",
+          "station": "Vidya Nagar"
+        },
+        {
+          "id": "TR2-26",
+          "latitude": 23.1860981,
+          "link": "https://www.google.com/maps/place/23.1860981,77.45415497",
+          "longitude": 77.45415497,
+          "route": "TR2",
+          "station": "Nikhil Homes"
+        },
+        {
+          "id": "TR2-27",
+          "latitude": 23.17489243,
+          "link": "https://www.google.com/maps/place/23.17489243,77.46015167",
+          "longitude": 77.46015167,
+          "route": "TR2",
+          "station": "Vrindavan Dawa"
+        },
+        {
+          "id": "TR2-28",
+          "latitude": 23.16836929,
+          "link": "https://www.google.com/maps/place/23.16836929,77.46434784",
+          "longitude": 77.46434784,
+          "route": "TR2",
+          "station": "Jatkhedi"
+        },
+        {
+          "id": "TR2-29",
+          "latitude": 23.16177368,
+          "link": "https://www.google.com/maps/place/23.16177368,77.46949005",
+          "longitude": 77.46949005,
+          "route": "TR2",
+          "station": "Misrod"
+        },
+        {
+          "id": "TR2-30",
+          "latitude": 23.15298653,
+          "link": "https://www.google.com/maps/place/23.15298653,77.47598267",
+          "longitude": 77.47598267,
+          "route": "TR2",
+          "station": "Scope Collage"
+        },
+        {
+          "id": "TR2-31",
+          "latitude": 23.14868927,
+          "link": "https://www.google.com/maps/place/23.14868927,77.47901917",
+          "longitude": 77.47901917,
+          "route": "TR2",
+          "station": "11 Miles"
+        },
+        {
+          "id": "TR2-32",
+          "latitude": 23.1418457,
+          "link": "https://www.google.com/maps/place/23.1418457,77.48423004",
+          "longitude": 77.48423004,
+          "route": "TR2",
+          "station": "Fun City"
+        },
+        {
+          "id": "TR2-33",
+          "latitude": 23.13746643,
+          "link": "https://www.google.com/maps/place/23.13746643,77.48442078",
+          "longitude": 77.48442078,
+          "route": "TR2",
+          "station": "Indus Town"
+        },
+        {
+          "id": "TR2-34",
+          "latitude": 23.11799049,
+          "link": "https://www.google.com/maps/place/23.11799049,77.50205231",
+          "longitude": 77.50205231,
+          "route": "TR2",
+          "station": "Samardha"
+        },
+        {
+          "id": "TR2-35",
+          "latitude": 23.09870338,
+          "link": "https://www.google.com/maps/place/23.09870338,77.50500488",
+          "longitude": 77.50500488,
+          "route": "TR2",
+          "station": "Mandideep"
+        },
+        {
+          "id": "TR2-36",
+          "latitude": 23.09870338,
+          "link": "https://www.google.com/maps/place/23.09870338,77.50500488",
+          "longitude": 77.50500488,
+          "route": "TR2",
+          "station": "Heg Mandideep"
+        },
+        {
+          "id": "TR3-1",
+          "latitude": 23.28458023,
+          "link": "https://www.google.com/maps/place/23.28458023,77.39729309",
+          "longitude": 77.39729309,
+          "route": "TR3",
+          "station": "Nariyal Kheda I"
+        },
+        {
+          "id": "TR3-2",
+          "latitude": 23.28339767,
+          "link": "https://www.google.com/maps/place/23.28339767,77.39651489",
+          "longitude": 77.39651489,
+          "route": "TR3",
+          "station": "Nariyal Kheda Ii"
+        },
+        {
+          "id": "TR3-3",
+          "latitude": 23.28057861,
+          "link": "https://www.google.com/maps/place/23.28057861,77.39465332",
+          "longitude": 77.39465332,
+          "route": "TR3",
+          "station": "Miltri Gate"
+        },
+        {
+          "id": "TR3-4",
+          "latitude": 23.28057861,
+          "link": "https://www.google.com/maps/place/23.28057861,77.39743805",
+          "longitude": 77.39743805,
+          "route": "TR3",
+          "station": "Tila Jamal Pura"
+        },
+        {
+          "id": "TR3-5",
+          "latitude": 23.28072548,
+          "link": "https://www.google.com/maps/place/23.28072548,77.39923096",
+          "longitude": 77.39923096,
+          "route": "TR3",
+          "station": "Gitanjali College"
+        },
+        {
+          "id": "TR3-6",
+          "latitude": 23.27911949,
+          "link": "https://www.google.com/maps/place/23.27911949,77.40231323",
+          "longitude": 77.40231323,
+          "route": "TR3",
+          "station": "Jawahar Lal Nehru Hos"
+        },
+        {
+          "id": "TR3-7",
+          "latitude": 23.27762222,
+          "link": "https://www.google.com/maps/place/23.27762222,77.40331268",
+          "longitude": 77.40331268,
+          "route": "TR3",
+          "station": "Big Bunglow"
+        },
+        {
+          "id": "TR3-8",
+          "latitude": 23.27482414,
+          "link": "https://www.google.com/maps/place/23.27482414,77.40249634",
+          "longitude": 77.40249634,
+          "route": "TR3",
+          "station": "Kaji Camp"
+        },
+        {
+          "id": "TR3-9",
+          "latitude": 23.27091599,
+          "link": "https://www.google.com/maps/place/23.27091599,77.40044403",
+          "longitude": 77.40044403,
+          "route": "TR3",
+          "station": "Sindi Colony"
+        },
+        {
+          "id": "TR3-10",
+          "latitude": 23.26757622,
+          "link": "https://www.google.com/maps/place/23.26757622,77.40079498",
+          "longitude": 77.40079498,
+          "route": "TR3",
+          "station": "Bhopal Talkies"
+        },
+        {
+          "id": "TR3-11",
+          "latitude": 23.2652874,
+          "link": "https://www.google.com/maps/place/23.2652874,77.40531921",
+          "longitude": 77.40531921,
+          "route": "TR3",
+          "station": "Nadra Bus Stand"
+        },
+        {
+          "id": "TR3-12",
+          "latitude": 23.26443863,
+          "link": "https://www.google.com/maps/place/23.26443863,77.40631866",
+          "longitude": 77.40631866,
+          "route": "TR3",
+          "station": "Sabji Mandi"
+        },
+        {
+          "id": "TR3-13",
+          "latitude": 23.26436806,
+          "link": "https://www.google.com/maps/place/23.26436806,77.41020203",
+          "longitude": 77.41020203,
+          "route": "TR3",
+          "station": "Alpana Tiraha"
+        },
+        {
+          "id": "TR3-14",
+          "latitude": 23.26047707,
+          "link": "https://www.google.com/maps/place/23.26047707,77.41085815",
+          "longitude": 77.41085815,
+          "route": "TR3",
+          "station": "Bharat Talkies"
+        },
+        {
+          "id": "TR3-15",
+          "latitude": 23.25993347,
+          "link": "https://www.google.com/maps/place/23.25993347,77.41261292",
+          "longitude": 77.41261292,
+          "route": "TR3",
+          "station": "Ajabghar"
+        },
+        {
+          "id": "TR3-16",
+          "latitude": 23.25993347,
+          "link": "https://www.google.com/maps/place/23.25993347,77.41261292",
+          "longitude": 77.41261292,
+          "route": "TR3",
+          "station": "Lady Hospital"
+        },
+        {
+          "id": "TR3-17",
+          "latitude": 23.25225258,
+          "link": "https://www.google.com/maps/place/23.25225258,77.41423798",
+          "longitude": 77.41423798,
+          "route": "TR3",
+          "station": "Jehangirabad"
+        },
+        {
+          "id": "TR3-18",
+          "latitude": 23.24808693,
+          "link": "https://www.google.com/maps/place/23.24808693,77.41262817",
+          "longitude": 77.41262817,
+          "route": "TR3",
+          "station": "Phq"
+        },
+        {
+          "id": "TR3-19",
+          "latitude": 23.24339485,
+          "link": "https://www.google.com/maps/place/23.24339485,77.4096756",
+          "longitude": 77.4096756,
+          "route": "TR3",
+          "station": "Police Control Room"
+        },
+        {
+          "id": "TR3-20",
+          "latitude": 23.242836,
+          "link": "https://www.google.com/maps/place/23.242836,77.40871429",
+          "longitude": 77.40871429,
+          "route": "TR3",
+          "station": "Old Vidhan Sabha"
+        },
+        {
+          "id": "TR3-21",
+          "latitude": 23.23756409,
+          "link": "https://www.google.com/maps/place/23.23756409,77.40115356",
+          "longitude": 77.40115356,
+          "route": "TR3",
+          "station": "Roshanpura"
+        },
+        {
+          "id": "TR3-22",
+          "latitude": 23.23516846,
+          "link": "https://www.google.com/maps/place/23.23516846,77.40137482",
+          "longitude": 77.40137482,
+          "route": "TR3",
+          "station": "New Market"
+        },
+        {
+          "id": "TR3-23",
+          "latitude": 23.23270798,
+          "link": "https://www.google.com/maps/place/23.23270798,77.41160583",
+          "longitude": 77.41160583,
+          "route": "TR3",
+          "station": "Prakash Tarun Pushkar"
+        },
+        {
+          "id": "TR3-24",
+          "latitude": 23.23146248,
+          "link": "https://www.google.com/maps/place/23.23146248,77.41585541",
+          "longitude": 77.41585541,
+          "route": "TR3",
+          "station": "1250 Hospital"
+        },
+        {
+          "id": "TR3-25",
+          "latitude": 23.23126602,
+          "link": "https://www.google.com/maps/place/23.23126602,77.42153931",
+          "longitude": 77.42153931,
+          "route": "TR3",
+          "station": "Cangress Bhawan"
+        },
+        {
+          "id": "TR3-26",
+          "latitude": 23.23079109,
+          "link": "https://www.google.com/maps/place/23.23079109,77.42773438",
+          "longitude": 77.42773438,
+          "route": "TR3",
+          "station": "Vyapam"
+        },
+        {
+          "id": "TR3-27",
+          "latitude": 23.23130417,
+          "link": "https://www.google.com/maps/place/23.23130417,77.43261719",
+          "longitude": 77.43261719,
+          "route": "TR3",
+          "station": "Board Office(Milan)"
+        },
+        {
+          "id": "TR3-28",
+          "latitude": 23.2332058,
+          "link": "https://www.google.com/maps/place/23.2332058,77.43466187",
+          "longitude": 77.43466187,
+          "route": "TR3",
+          "station": "Jyoti Talkies"
+        },
+        {
+          "id": "TR3-29",
+          "latitude": 23.22909546,
+          "link": "https://www.google.com/maps/place/23.22909546,77.44200134",
+          "longitude": 77.44200134,
+          "route": "TR3",
+          "station": "Isbt"
+        },
+        {
+          "id": "TR3-30",
+          "latitude": 23.23284149,
+          "link": "https://www.google.com/maps/place/23.23284149,77.44184113",
+          "longitude": 77.44184113,
+          "route": "TR3",
+          "station": "Kasturwa Nagar"
+        },
+        {
+          "id": "TR3-31",
+          "latitude": 23.23412514,
+          "link": "https://www.google.com/maps/place/23.23412514,77.44158173",
+          "longitude": 77.44158173,
+          "route": "TR3",
+          "station": "Goutam Nagar"
+        },
+        {
+          "id": "TR3-32",
+          "latitude": 23.23427582,
+          "link": "https://www.google.com/maps/place/23.23427582,77.44258881",
+          "longitude": 77.44258881,
+          "route": "TR3",
+          "station": "Shanti Niketan"
+        },
+        {
+          "id": "TR3-33",
+          "latitude": 23.24155045,
+          "link": "https://www.google.com/maps/place/23.24155045,77.44004822",
+          "longitude": 77.44004822,
+          "route": "TR3",
+          "station": "Janta Quatar"
+        },
+        {
+          "id": "TR3-34",
+          "latitude": 23.24440575,
+          "link": "https://www.google.com/maps/place/23.24440575,77.4357605",
+          "longitude": 77.4357605,
+          "route": "TR3",
+          "station": "Sant Pitar Charch"
+        },
+        {
+          "id": "TR3-35",
+          "latitude": 23.24682045,
+          "link": "https://www.google.com/maps/place/23.24682045,77.43184662",
+          "longitude": 77.43184662,
+          "route": "TR3",
+          "station": "Subhas Fatak"
+        },
+        {
+          "id": "TR3-36",
+          "latitude": 23.25223732,
+          "link": "https://www.google.com/maps/place/23.25223732,77.43135071",
+          "longitude": 77.43135071,
+          "route": "TR3",
+          "station": "Prabhat Petrol Pump"
+        },
+        {
+          "id": "TR3-37",
+          "latitude": 23.25314903,
+          "link": "https://www.google.com/maps/place/23.25314903,77.43582153",
+          "longitude": 77.43582153,
+          "route": "TR3",
+          "station": "Punjabi Bagh"
+        },
+        {
+          "id": "TR3-38",
+          "latitude": 23.25498009,
+          "link": "https://www.google.com/maps/place/23.25498009,77.4407959",
+          "longitude": 77.4407959,
+          "route": "TR3",
+          "station": "Bijli Colony"
+        },
+        {
+          "id": "TR3-39",
+          "latitude": 23.2472229,
+          "link": "https://www.google.com/maps/place/23.2472229,77.44438171",
+          "longitude": 77.44438171,
+          "route": "TR3",
+          "station": "Govind Pura"
+        },
+        {
+          "id": "TR3-40",
+          "latitude": 23.25288773,
+          "link": "https://www.google.com/maps/place/23.25288773,77.44729614",
+          "longitude": 77.44729614,
+          "route": "TR3",
+          "station": "Industrial Gate"
+        },
+        {
+          "id": "TR3-41",
+          "latitude": 23.25247955,
+          "link": "https://www.google.com/maps/place/23.25247955,77.44995117",
+          "longitude": 77.44995117,
+          "route": "TR3",
+          "station": "I.T.I."
+        },
+        {
+          "id": "TR3-42",
+          "latitude": 23.25149345,
+          "link": "https://www.google.com/maps/place/23.25149345,77.45642853",
+          "longitude": 77.45642853,
+          "route": "TR3",
+          "station": "J.K. Road Tiraha"
+        },
+        {
+          "id": "TR3-43",
+          "latitude": 23.25102043,
+          "link": "https://www.google.com/maps/place/23.25102043,77.45980072",
+          "longitude": 77.45980072,
+          "route": "TR3",
+          "station": "Bhel Gate -1"
+        },
+        {
+          "id": "TR3-44",
+          "latitude": 23.25033951,
+          "link": "https://www.google.com/maps/place/23.25033951,77.46299744",
+          "longitude": 77.46299744,
+          "route": "TR3",
+          "station": "Jubli Gate \u2013 Bhel"
+        },
+        {
+          "id": "TR3-45",
+          "latitude": 23.24983215,
+          "link": "https://www.google.com/maps/place/23.24983215,77.46750641",
+          "longitude": 77.46750641,
+          "route": "TR3",
+          "station": "Bima Hospital"
+        },
+        {
+          "id": "TR3-46",
+          "latitude": 23.24910355,
+          "link": "https://www.google.com/maps/place/23.24910355,77.4718399",
+          "longitude": 77.4718399,
+          "route": "TR3",
+          "station": "Piplani Pump"
+        },
+        {
+          "id": "TR3-47",
+          "latitude": 23.24972725,
+          "link": "https://www.google.com/maps/place/23.24972725,77.47714996",
+          "longitude": 77.47714996,
+          "route": "TR3",
+          "station": "Kalpana Nagar"
+        },
+        {
+          "id": "TR3-48",
+          "latitude": 23.25010109,
+          "link": "https://www.google.com/maps/place/23.25010109,77.47882843",
+          "longitude": 77.47882843,
+          "route": "TR3",
+          "station": "Ratnagiri Bypass"
+        },
+        {
+          "id": "TR3-49",
+          "latitude": 23.25810432,
+          "link": "https://www.google.com/maps/place/23.25810432,77.47951508",
+          "longitude": 77.47951508,
+          "route": "TR3",
+          "station": "Prakash Nagar"
+        },
+        {
+          "id": "TR3-50",
+          "latitude": 23.2565937,
+          "link": "https://www.google.com/maps/place/23.2565937,77.48345947",
+          "longitude": 77.48345947,
+          "route": "TR3",
+          "station": "Rajiv Gandhi Nagar"
+        },
+        {
+          "id": "TR3-51",
+          "latitude": 23.26511574,
+          "link": "https://www.google.com/maps/place/23.26511574,77.47123718",
+          "longitude": 77.47123718,
+          "route": "TR3",
+          "station": "Century Garden"
+        },
+        {
+          "id": "TR3-52",
+          "latitude": 23.27067566,
+          "link": "https://www.google.com/maps/place/23.27067566,77.46302795",
+          "longitude": 77.46302795,
+          "route": "TR3",
+          "station": "Narela Shankri"
+        },
+        {
+          "id": "TR3-53",
+          "latitude": 23.27220726,
+          "link": "https://www.google.com/maps/place/23.27220726,77.46840668",
+          "longitude": 77.46840668,
+          "route": "TR3",
+          "station": "Sagar Avenue"
+        },
+        {
+          "id": "TR3-54",
+          "latitude": 23.27833939,
+          "link": "https://www.google.com/maps/place/23.27833939,77.46733093",
+          "longitude": 77.46733093,
+          "route": "TR3",
+          "station": "Ayodhya Bypass"
+        },
+        {
+          "id": "TR3-55",
+          "latitude": 23.27690315,
+          "link": "https://www.google.com/maps/place/23.27690315,77.46582794",
+          "longitude": 77.46582794,
+          "route": "TR3",
+          "station": "Gardan"
+        },
+        {
+          "id": "TR3-56",
+          "latitude": 23.26440048,
+          "link": "https://www.google.com/maps/place/23.26440048,77.47593689",
+          "longitude": 77.47593689,
+          "route": "TR3",
+          "station": "Ayodhya Naga"
+        },
+        {
+          "id": "TR4-1",
+          "latitude": 23.26959038,
+          "link": "https://www.google.com/maps/place/23.26959038,77.32872772",
+          "longitude": 77.32872772,
+          "route": "TR4",
+          "station": "Sehore Naka"
+        },
+        {
+          "id": "TR4-2",
+          "latitude": 23.27044868,
+          "link": "https://www.google.com/maps/place/23.27044868,77.33410645",
+          "longitude": 77.33410645,
+          "route": "TR4",
+          "station": "Kalimata Mandir"
+        },
+        {
+          "id": "TR4-3",
+          "latitude": 23.27105904,
+          "link": "https://www.google.com/maps/place/23.27105904,77.33654022",
+          "longitude": 77.33654022,
+          "route": "TR4",
+          "station": "Chanchal Chouraha"
+        },
+        {
+          "id": "TR4-4",
+          "latitude": 23.27205276,
+          "link": "https://www.google.com/maps/place/23.27205276,77.34080505",
+          "longitude": 77.34080505,
+          "route": "TR4",
+          "station": "Civil Hospital"
+        },
+        {
+          "id": "TR4-5",
+          "latitude": 23.27275467,
+          "link": "https://www.google.com/maps/place/23.27275467,77.34391785",
+          "longitude": 77.34391785,
+          "route": "TR4",
+          "station": "St. Hirdaram Chouraha"
+        },
+        {
+          "id": "TR4-6",
+          "latitude": 23.27355194,
+          "link": "https://www.google.com/maps/place/23.27355194,77.3495636",
+          "longitude": 77.3495636,
+          "route": "TR4",
+          "station": "Pump House"
+        },
+        {
+          "id": "TR4-7",
+          "latitude": 23.27374077,
+          "link": "https://www.google.com/maps/place/23.27374077,77.35884857",
+          "longitude": 77.35884857,
+          "route": "TR4",
+          "station": "Sundarvan Gardan"
+        },
+        {
+          "id": "TR4-8",
+          "latitude": 23.27383423,
+          "link": "https://www.google.com/maps/place/23.27383423,77.36322021",
+          "longitude": 77.36322021,
+          "route": "TR4",
+          "station": "Halalpur Bus Staind"
+        },
+        {
+          "id": "TR4-9",
+          "latitude": 23.27306938,
+          "link": "https://www.google.com/maps/place/23.27306938,77.36846924",
+          "longitude": 77.36846924,
+          "route": "TR4",
+          "station": "Lalghati"
+        },
+        {
+          "id": "TR4-10",
+          "latitude": 23.27121925,
+          "link": "https://www.google.com/maps/place/23.27121925,77.37582397",
+          "longitude": 77.37582397,
+          "route": "TR4",
+          "station": "Vip Guest House"
+        },
+        {
+          "id": "TR4-11",
+          "latitude": 23.26911736,
+          "link": "https://www.google.com/maps/place/23.26911736,77.37727356",
+          "longitude": 77.37727356,
+          "route": "TR4",
+          "station": "Koh-E-Fiza"
+        },
+        {
+          "id": "TR4-12",
+          "latitude": 23.26358795,
+          "link": "https://www.google.com/maps/place/23.26358795,77.38312531",
+          "longitude": 77.38312531,
+          "route": "TR4",
+          "station": "Collectorate"
+        },
+        {
+          "id": "TR4-13",
+          "latitude": 23.26187897,
+          "link": "https://www.google.com/maps/place/23.26187897,77.38874054",
+          "longitude": 77.38874054,
+          "route": "TR4",
+          "station": "Sbi Chouraha"
+        },
+        {
+          "id": "TR4-14",
+          "latitude": 23.26150322,
+          "link": "https://www.google.com/maps/place/23.26150322,77.39205933",
+          "longitude": 77.39205933,
+          "route": "TR4",
+          "station": "Royal Market"
+        },
+        {
+          "id": "TR4-15",
+          "latitude": 23.25872231,
+          "link": "https://www.google.com/maps/place/23.25872231,77.39507294",
+          "longitude": 77.39507294,
+          "route": "TR4",
+          "station": "Hamidia Hospital Gate No.02"
+        },
+        {
+          "id": "TR4-16",
+          "latitude": 23.25592232,
+          "link": "https://www.google.com/maps/place/23.25592232,77.39857483",
+          "longitude": 77.39857483,
+          "route": "TR4",
+          "station": "Moti Masjid"
+        },
+        {
+          "id": "TR4-17",
+          "latitude": 23.25196648,
+          "link": "https://www.google.com/maps/place/23.25196648,77.39789581",
+          "longitude": 77.39789581,
+          "route": "TR4",
+          "station": "Kamla Park"
+        },
+        {
+          "id": "TR4-18",
+          "latitude": 23.24457741,
+          "link": "https://www.google.com/maps/place/23.24457741,77.39684296",
+          "longitude": 77.39684296,
+          "route": "TR4",
+          "station": "Polytechnic"
+        },
+        {
+          "id": "TR4-19",
+          "latitude": 23.24323654,
+          "link": "https://www.google.com/maps/place/23.24323654,77.39744568",
+          "longitude": 77.39744568,
+          "route": "TR4",
+          "station": "Ravindra Bhavan"
+        },
+        {
+          "id": "TR4-20",
+          "latitude": 23.23756409,
+          "link": "https://www.google.com/maps/place/23.23756409,77.40115356",
+          "longitude": 77.40115356,
+          "route": "TR4",
+          "station": "Roshanpura"
+        },
+        {
+          "id": "TR4-21",
+          "latitude": 23.23437881,
+          "link": "https://www.google.com/maps/place/23.23437881,77.40141296",
+          "longitude": 77.40141296,
+          "route": "TR4",
+          "station": "New Market Top & Town"
+        },
+        {
+          "id": "TR4-22",
+          "latitude": 23.23324776,
+          "link": "https://www.google.com/maps/place/23.23324776,77.4030838",
+          "longitude": 77.4030838,
+          "route": "TR4",
+          "station": "Nanke Petrol Pump"
+        },
+        {
+          "id": "TR4-23",
+          "latitude": 23.23270798,
+          "link": "https://www.google.com/maps/place/23.23270798,77.41160583",
+          "longitude": 77.41160583,
+          "route": "TR4",
+          "station": "Prakash Tarun Pushkar"
+        },
+        {
+          "id": "TR4-24",
+          "latitude": 23.23146248,
+          "link": "https://www.google.com/maps/place/23.23146248,77.41585541",
+          "longitude": 77.41585541,
+          "route": "TR4",
+          "station": "1250 Hospital"
+        },
+        {
+          "id": "TR4-25",
+          "latitude": 23.23147583,
+          "link": "https://www.google.com/maps/place/23.23147583,77.41785431",
+          "longitude": 77.41785431,
+          "route": "TR4",
+          "station": "Red Cross Hospital"
+        },
+        {
+          "id": "TR4-26",
+          "latitude": 23.23126602,
+          "link": "https://www.google.com/maps/place/23.23126602,77.42153931",
+          "longitude": 77.42153931,
+          "route": "TR4",
+          "station": "Cangress Bhawan"
+        },
+        {
+          "id": "TR4-27",
+          "latitude": 23.23079109,
+          "link": "https://www.google.com/maps/place/23.23079109,77.42773438",
+          "longitude": 77.42773438,
+          "route": "TR4",
+          "station": "Vyapam"
+        },
+        {
+          "id": "TR4-28",
+          "latitude": 23.23130226,
+          "link": "https://www.google.com/maps/place/23.23130226,77.432724",
+          "longitude": 77.432724,
+          "route": "TR4",
+          "station": "Board Office"
+        },
+        {
+          "id": "TR4-29",
+          "latitude": 23.23368263,
+          "link": "https://www.google.com/maps/place/23.23368263,77.43408203",
+          "longitude": 77.43408203,
+          "route": "TR4",
+          "station": "Jyoti Takiz"
+        },
+        {
+          "id": "TR4-30",
+          "latitude": 23.23284149,
+          "link": "https://www.google.com/maps/place/23.23284149,77.44184113",
+          "longitude": 77.44184113,
+          "route": "TR4",
+          "station": "Kasturwa Nagar"
+        },
+        {
+          "id": "TR4-31",
+          "latitude": 23.22909546,
+          "link": "https://www.google.com/maps/place/23.22909546,77.44200134",
+          "longitude": 77.44200134,
+          "route": "TR4",
+          "station": "Isbt"
+        },
+        {
+          "id": "TR4-32",
+          "latitude": 23.22394371,
+          "link": "https://www.google.com/maps/place/23.22394371,77.44197083",
+          "longitude": 77.44197083,
+          "route": "TR4",
+          "station": "Dudh Dairy"
+        },
+        {
+          "id": "TR4-33",
+          "latitude": 23.22178268,
+          "link": "https://www.google.com/maps/place/23.22178268,77.43771362",
+          "longitude": 77.43771362,
+          "route": "TR4",
+          "station": "Habibganj Railway Station"
+        },
+        {
+          "id": "TR4-34",
+          "latitude": 23.21614647,
+          "link": "https://www.google.com/maps/place/23.21614647,77.44187164",
+          "longitude": 77.44187164,
+          "route": "TR4",
+          "station": "Habibganj Naka"
+        },
+        {
+          "id": "TR4-35",
+          "latitude": 23.20774269,
+          "link": "https://www.google.com/maps/place/23.20774269,77.44474792",
+          "longitude": 77.44474792,
+          "route": "TR4",
+          "station": "Ampri"
+        },
+        {
+          "id": "TR4-36",
+          "latitude": 23.20410919,
+          "link": "https://www.google.com/maps/place/23.20410919,77.44606018",
+          "longitude": 77.44606018,
+          "route": "TR4",
+          "station": "Narayan Nagar"
+        },
+        {
+          "id": "TR4-37",
+          "latitude": 23.20056152,
+          "link": "https://www.google.com/maps/place/23.20056152,77.44733429",
+          "longitude": 77.44733429,
+          "route": "TR4",
+          "station": "University Gate"
+        },
+        {
+          "id": "TR4-38",
+          "latitude": 23.19541168,
+          "link": "https://www.google.com/maps/place/23.19541168,77.44908142",
+          "longitude": 77.44908142,
+          "route": "TR4",
+          "station": "Vidhya Nagar"
+        },
+        {
+          "id": "TR4-39",
+          "latitude": 23.19236565,
+          "link": "https://www.google.com/maps/place/23.19236565,77.4500885",
+          "longitude": 77.4500885,
+          "route": "TR4",
+          "station": "Bagsewaniya Junction"
+        },
+        {
+          "id": "TR4-40",
+          "latitude": 23.1885376,
+          "link": "https://www.google.com/maps/place/23.1885376,77.45156097",
+          "longitude": 77.45156097,
+          "route": "TR4",
+          "station": "Ahemadpur Railway Station"
+        },
+        {
+          "id": "TR4-41",
+          "latitude": 23.18350792,
+          "link": "https://www.google.com/maps/place/23.18350792,77.45458984",
+          "longitude": 77.45458984,
+          "route": "TR4",
+          "station": "Paras Harrmitage"
+        },
+        {
+          "id": "TR4-42",
+          "latitude": 23.17835999,
+          "link": "https://www.google.com/maps/place/23.17835999,77.45793152",
+          "longitude": 77.45793152,
+          "route": "TR4",
+          "station": "Chinar Fortune City"
+        },
+        {
+          "id": "TR4-43",
+          "latitude": 23.17455292,
+          "link": "https://www.google.com/maps/place/23.17455292,77.46031952",
+          "longitude": 77.46031952,
+          "route": "TR4",
+          "station": "Kali Mata Mandir"
+        },
+        {
+          "id": "TR4-44",
+          "latitude": 23.17135811,
+          "link": "https://www.google.com/maps/place/23.17135811,77.46237946",
+          "longitude": 77.46237946,
+          "route": "TR4",
+          "station": "Shri Ram Colony"
+        },
+        {
+          "id": "TR4-45",
+          "latitude": 23.16838837,
+          "link": "https://www.google.com/maps/place/23.16838837,77.46439362",
+          "longitude": 77.46439362,
+          "route": "TR4",
+          "station": "R.K.D.F. College"
+        },
+        {
+          "id": "TR4-46",
+          "latitude": 23.16534042,
+          "link": "https://www.google.com/maps/place/23.16534042,77.46666718",
+          "longitude": 77.46666718,
+          "route": "TR4",
+          "station": "Allahabad Bank"
+        },
+        {
+          "id": "TR4-47",
+          "latitude": 23.16177368,
+          "link": "https://www.google.com/maps/place/23.16177368,77.46949005",
+          "longitude": 77.46949005,
+          "route": "TR4",
+          "station": "Misrod"
+        }
+      ],
+      "getColor": [
+        255,
+        0,
+        0
+      ],
+      "getPosition": "@@=[longitude, latitude]",
+      "getRadius": 50,
+      "id": "11796da5-57e3-4c88-b155-bea4a023bcde",
+      "opacity": 0.8,
+      "pickable": true,
+      "widthMinPixels": 5
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = true;
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>

@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
         {
-            "src": "public/trips_layer.html",
+            "src": "index.html",
             "use": "@vercel/static"
         }
     ],
     "routes": [
         {
             "src": "/",
-            "dest": "/public/trips_layer.html"
+            "dest": "index.html"
         }
     ]
 }

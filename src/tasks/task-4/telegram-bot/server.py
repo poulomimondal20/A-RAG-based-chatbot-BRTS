@@ -1,23 +1,23 @@
-import logging
 import os
+import logging
 import pandas as pd
+from dotenv import load_dotenv
+from utils.utils import find_closest_bus_station
 from telegram import Update, Voice, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CommandHandler, MessageHandler, CallbackQueryHandler, filters, CallbackContext, Application
-from utils.utils import find_closest_bus_station, display_current_info
-from utils.constants import LANDMARK_COLORS
+
 from utils.chatbot import ask_question
-from dotenv import load_dotenv
+
 import torch
-from transformers import AutoModelForCTC, AutoProcessor
-import torchaudio.functional as F
-from deep_translator import GoogleTranslator
 import torchaudio
 from gtts import gTTS
+import torchaudio.functional as F
+from deep_translator import GoogleTranslator
+from transformers import AutoModelForCTC, AutoProcessor
 
 load_dotenv()
 
 df = pd.read_csv("assets/data/all_routes_combined.csv")
-df["color"] = df.apply(lambda x: LANDMARK_COLORS[x["route"]]["rgb"], axis=1)
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
@@ -121,7 +121,6 @@ async def voice_query(update: Update, context: CallbackContext) -> None:
 
 async def general_query(update: Update, context: CallbackContext) -> None:
     query = update.message.text
-    response = ask_question(query)
     user_id = update.message.from_user.id
     preferred_language = user_language_preferences.get(user_id, 'en')
 
